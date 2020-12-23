@@ -1,0 +1,7 @@
+package playingcoffee.core;
+
+public class MMU {
+
+	private int ram[];
+	
+}

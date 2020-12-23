@@ -1,0 +1,32 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	private final MMU mmu;
+	
+	private Registers registers;
+	
+	public CPU(final MMU mmu) {
+		this.mmu = mmu;
+		
+		registers = new Registers();
+	}
+	
+	public Registers getRegisters() {
+		return registers;
+	}
+	
+	public void cycle() {
+		int opcode = mmu.read(registers.pc++);
+		System.out.printf("Fetched opcode: 0x%02x\n", opcode);
+		
+		// Basic CPU implementation.
+		// This will be changed in the future.
+		switch (opcode) {
+		case 0x00: // NOP
+			break;
+		case 0x31:
+			registers.sp = (mmu.read(registers.pc++) << 8) | mmu.read(registers.pc++);
+		}
+	}
+}

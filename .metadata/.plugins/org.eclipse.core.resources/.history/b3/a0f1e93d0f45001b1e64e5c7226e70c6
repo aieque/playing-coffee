@@ -1,0 +1,13 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	private Registers registers;
+
+	public Registers getRegisters() {
+		return registers;
+	}
+	
+	
+	
+}

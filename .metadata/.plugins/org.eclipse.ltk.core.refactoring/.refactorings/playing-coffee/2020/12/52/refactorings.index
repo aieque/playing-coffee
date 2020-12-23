@@ -1,0 +1,14 @@
+1608703634619	Rename field 'm_CPU'
+1608705162910	Rename package 'playingcoffee.core.cpi'
+1608705167244	Move compilation unit
+1608708385274	Rename type 'MicroOps'
+1608709056373	Delete element
+1608710053096	Move compilation unit
+1608720267816	Delete elements
+1608720848634	Rename field 'table'
+1608720868704	Rename local variable 'list'
+1608720923801	Rename package 'playingcoffee.coer'
+1608741952793	Rename type 'Op'
+1608742512523	Rename field 'stored'
+1608742919599	Delete element
+1608746579753	Rename field 'instructionCycle'

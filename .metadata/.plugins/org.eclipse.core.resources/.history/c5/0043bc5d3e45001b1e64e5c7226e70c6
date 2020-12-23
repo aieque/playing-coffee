@@ -1,0 +1,11 @@
+package playingcoffee.core;
+
+public class Opcode {
+
+	public class Op {
+		
+		
+		
+	}
+	
+}

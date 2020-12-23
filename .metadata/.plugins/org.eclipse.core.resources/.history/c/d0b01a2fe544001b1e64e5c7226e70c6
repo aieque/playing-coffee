@@ -1,0 +1,8 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	public void clock() {
+		
+	}
+}

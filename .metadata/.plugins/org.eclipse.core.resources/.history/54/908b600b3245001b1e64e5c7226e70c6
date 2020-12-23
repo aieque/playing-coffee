@@ -1,0 +1,15 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	private Registers registers;
+
+	public CPU() {
+		registers = new Registers();
+	}
+	
+	public Registers getRegisters() {
+		return registers;
+	}
+	
+}

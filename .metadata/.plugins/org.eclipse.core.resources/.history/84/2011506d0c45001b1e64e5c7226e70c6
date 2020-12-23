@@ -1,0 +1,92 @@
+package playingcoffee.ui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JTable;
+
+public class CPUDebugger {
+
+	private JFrame frame;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CPUDebugger window = new CPUDebugger();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public CPUDebugger() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JButton btnStep = new JButton("Step");
+		
+		JButton btnReset = new JButton("Reset");
+		
+		JLabel lblRegisters = new JLabel("Registers");
+		
+		JList list = new JList();
+		
+		table = new JTable();
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+						.addComponent(list, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+							.addComponent(btnStep)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnReset))
+						.addComponent(lblRegisters, Alignment.LEADING))
+					.addGap(18)
+					.addComponent(table, GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+					.addContainerGap())
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblRegisters)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(list, GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+						.addComponent(table, GroupLayout.PREFERRED_SIZE, 219, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnStep)
+						.addComponent(btnReset))
+					.addContainerGap())
+		);
+		frame.getContentPane().setLayout(groupLayout);
+	}
+}

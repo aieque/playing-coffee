@@ -1,0 +1,13 @@
+package playingcoffee.core.cpu;
+
+import playingcoffee.core.cpu.microop.MicroOp;
+
+public class Opcode {
+
+	List<MicroOp> microOps;
+	
+	public Opcode(MicroOp... ops) {
+		
+	}
+	
+}

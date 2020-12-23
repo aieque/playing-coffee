@@ -1,0 +1,11 @@
+package playingcoffee.core.cpu;
+
+public abstract class MicroOp {
+
+	private int length;
+	
+	public int getLength() {
+		return length;
+	}
+	
+}

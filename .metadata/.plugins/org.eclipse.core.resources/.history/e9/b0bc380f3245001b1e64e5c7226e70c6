@@ -1,0 +1,17 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	private final MMU mmu;
+	
+	private Registers registers;
+
+	public CPU() {
+		registers = new Registers();
+	}
+	
+	public Registers getRegisters() {
+		return registers;
+	}
+	
+}

@@ -1,0 +1,9 @@
+package playingcoffee.core;
+
+public class Gameboy {
+
+	public Gameboy() {
+		
+	}
+	
+}

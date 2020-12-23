@@ -1,0 +1,5 @@
+package playingcoffee.core.cpu;
+
+public abstract class MicroOp {
+
+}

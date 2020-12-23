@@ -1,0 +1,20 @@
+package playingcoffee.core.cpu;
+
+import playingcoffee.core.Memory;
+
+public class CPU {
+
+	private final Memory memory;
+	
+	public CPU(Memory memory) {
+		this.memory = memory;
+	}
+	
+	public void registerOpcodes() {
+		
+	}
+	
+	public void clock() {
+		
+	}
+}

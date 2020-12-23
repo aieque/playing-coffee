@@ -1,0 +1,19 @@
+package playingcoffee.core;
+
+import playingcoffee.core.cpu.CPU;
+
+public class Gameboy {
+
+	private CPU cpu;
+	private Memory memory;
+	
+	public Gameboy() {
+		memory = new Memory();
+		cpu = new CPU(memory);
+	
+		while (true) {
+			cpu.clock();
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+package playingcoffee.core;
+
+public class Opcode {
+
+	private Op[] ops;
+	
+	public Opcode(Op... ops) {
+		this.ops = ops;
+	}
+	
+	public void execute() {
+		for (Op op : ops)
+			op.execute();
+	}
+	
+	public class Op {
+		
+		
+		
+	}
+	
+}

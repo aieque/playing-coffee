@@ -1,0 +1,16 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	private final Memory memory;
+	
+	
+	
+	public CPU(Memory memory) {
+		this.memory = memory;
+	}
+	
+	public void clock() {
+		
+	}
+}

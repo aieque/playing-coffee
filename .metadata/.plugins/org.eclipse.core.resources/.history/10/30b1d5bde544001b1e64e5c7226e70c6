@@ -1,0 +1,12 @@
+package playingcoffee.core;
+
+public class CPU {
+
+	public CPU() {
+		
+	}
+	
+	public void clock() {
+		
+	}
+}

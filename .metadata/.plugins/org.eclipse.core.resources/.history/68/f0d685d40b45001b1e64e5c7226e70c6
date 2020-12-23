@@ -1,0 +1,12 @@
+package playingcoffee.core.cpu.microop;
+
+public abstract class MicroOp {
+
+	private int cycles;
+	
+	public int getLength() {
+		return cycles;
+	}
+	
+	public abstract void execute();
+}

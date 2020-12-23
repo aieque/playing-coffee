@@ -1,0 +1,15 @@
+package playingcoffee.core;
+
+public class Gameboy {
+
+	private CPU m_CPU;
+	
+	public Gameboy() {
+		m_CPU = new CPU();
+	
+		while (true) {
+			
+		}
+	}
+	
+}

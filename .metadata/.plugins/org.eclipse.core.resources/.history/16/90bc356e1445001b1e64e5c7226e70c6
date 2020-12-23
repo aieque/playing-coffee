@@ -1,0 +1,17 @@
+package playingcoffee.core;
+
+public class MMU {
+
+	private int ram[];
+	
+	
+	
+	public void write(int value, int address) {
+		ram[address] = value;
+	}
+	
+	public int read(int address) {
+		return ram[address];
+	}
+	
+}

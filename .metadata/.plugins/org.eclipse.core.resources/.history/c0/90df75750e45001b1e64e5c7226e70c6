@@ -1,0 +1,13 @@
+package playingcoffee.core;
+
+public class Registers {
+
+	private int a, f;
+	private int b, c;
+	private int d, e;
+	private int h, l;
+	
+	private int pc;
+	private int sp;
+	
+}

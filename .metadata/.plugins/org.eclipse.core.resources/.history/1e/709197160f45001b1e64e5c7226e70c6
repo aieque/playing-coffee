@@ -1,0 +1,113 @@
+package playingcoffee.core;
+
+public class Registers {
+
+	private int a, f;
+	private int b, c;
+	private int d, e;
+	private int h, l;
+	
+	private int pc;
+	private int sp;
+	
+	public int readA() {
+		return a;
+	}
+	
+	public void writeA(int a) {
+		verify(a);
+		
+		this.a = a;
+	}
+	
+	public int readF() {
+		return f;
+	}
+	
+	public void writeF(int f) {
+		verify(a);
+		
+		this.f = f;
+	}
+	
+	public int readB() {
+		return b;
+	}
+	
+	public void writeB(int b) {
+		verify(a);
+		
+		this.b = b;
+	}
+	
+	public int readC() {
+		return c;
+	}
+	
+	public void writeC(int c) {
+		verify(a);
+		
+		this.c = c;
+	}
+	
+	public int readD() {
+		return d;
+	}
+	
+	public void writeD(int d) {
+		verify(a);
+		
+		this.d = d;
+	}
+	
+	public int readE() {
+		return e;
+	}
+	
+	public void writeE(int e) {
+		verify(a);
+		
+		this.e = e;
+	}
+	
+	public int readH() {
+		return h;
+	}
+	
+	public void writeH(int h) {
+		verify(a);
+		
+		this.h = h;
+	}
+	
+	public int readL() {
+		return l;
+	}
+	
+	public void writeL(int l) {
+		verify(a);
+		
+		this.l = l;
+	}
+	
+	public int readPC() {
+		return pc;
+	}
+	
+	public void writePC(int pc) {
+		verify(a);
+		
+		this.pc = pc;
+	}
+	
+	public int readSP() {
+		return sp;
+	}
+	
+	public void writeSP(int sp) {
+		verify(a);
+		
+		this.sp = sp;
+	}
+	
+}
