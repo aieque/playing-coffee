@@ -1,0 +1,646 @@
+[19:39:15.741] Info: Initialized logger
+[19:39:15.830] Info: Pushing 0x  2b to the stack.
+[19:39:15.831] Info: Pushing 0x 4ce to the stack.
+[19:39:15.832] Info: Pushing 0x 39d to the stack.
+[19:39:15.832] Info: Pushing 0x 23a to the stack.
+[19:39:15.832] Info: Pushing 0x 175 to the stack.
+[19:39:15.832] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.832] Info: Pushing 0x  2e to the stack.
+[19:39:15.833] Info: Pushing 0x 4eb to the stack.
+[19:39:15.833] Info: Pushing 0x 3d7 to the stack.
+[19:39:15.833] Info: Pushing 0x 2af to the stack.
+[19:39:15.833] Info: Pushing 0x 15e to the stack.
+[19:39:15.833] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.834] Info: Pushing 0x  2b to the stack.
+[19:39:15.834] Info: Pushing 0x 4ed to the stack.
+[19:39:15.834] Info: Pushing 0x 3db to the stack.
+[19:39:15.834] Info: Pushing 0x 2b7 to the stack.
+[19:39:15.835] Info: Pushing 0x 16f to the stack.
+[19:39:15.835] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.835] Info: Pushing 0x  2e to the stack.
+[19:39:15.835] Info: Pushing 0x 4de to the stack.
+[19:39:15.835] Info: Pushing 0x 3bd to the stack.
+[19:39:15.835] Info: Pushing 0x 27b to the stack.
+[19:39:15.835] Info: Pushing 0x 1f7 to the stack.
+[19:39:15.835] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.836] Info: Pushing 0x  2b to the stack.
+[19:39:15.836] Info: Pushing 0x 466 to the stack.
+[19:39:15.836] Info: Pushing 0x 3cc to the stack.
+[19:39:15.836] Info: Pushing 0x 299 to the stack.
+[19:39:15.836] Info: Pushing 0x 132 to the stack.
+[19:39:15.836] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.836] Info: Pushing 0x  2e to the stack.
+[19:39:15.836] Info: Pushing 0x 465 to the stack.
+[19:39:15.836] Info: Pushing 0x 3ca to the stack.
+[19:39:15.837] Info: Pushing 0x 295 to the stack.
+[19:39:15.837] Info: Pushing 0x 12b to the stack.
+[19:39:15.837] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.837] Info: Pushing 0x  2b to the stack.
+[19:39:15.837] Info: Pushing 0x 466 to the stack.
+[19:39:15.837] Info: Pushing 0x 3cc to the stack.
+[19:39:15.837] Info: Pushing 0x 299 to the stack.
+[19:39:15.837] Info: Pushing 0x 132 to the stack.
+[19:39:15.838] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.838] Info: Pushing 0x  2e to the stack.
+[19:39:15.838] Info: Pushing 0x 465 to the stack.
+[19:39:15.838] Info: Pushing 0x 3ca to the stack.
+[19:39:15.838] Info: Pushing 0x 295 to the stack.
+[19:39:15.838] Info: Pushing 0x 12b to the stack.
+[19:39:15.838] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.838] Info: Pushing 0x  2b to the stack.
+[19:39:15.839] Info: Pushing 0x 4cc to the stack.
+[19:39:15.839] Info: Pushing 0x 399 to the stack.
+[19:39:15.839] Info: Pushing 0x 232 to the stack.
+[19:39:15.839] Info: Pushing 0x 165 to the stack.
+[19:39:15.839] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.839] Info: Pushing 0x  2e to the stack.
+[19:39:15.839] Info: Pushing 0x 4ca to the stack.
+[19:39:15.839] Info: Pushing 0x 395 to the stack.
+[19:39:15.840] Info: Pushing 0x 22b to the stack.
+[19:39:15.840] Info: Pushing 0x 156 to the stack.
+[19:39:15.840] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.840] Info: Pushing 0x  2b to the stack.
+[19:39:15.840] Info: Pushing 0x 40d to the stack.
+[19:39:15.840] Info: Pushing 0x 31a to the stack.
+[19:39:15.840] Info: Pushing 0x 234 to the stack.
+[19:39:15.840] Info: Pushing 0x 169 to the stack.
+[19:39:15.841] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.841] Info: Pushing 0x  2e to the stack.
+[19:39:15.841] Info: Pushing 0x 4d2 to the stack.
+[19:39:15.841] Info: Pushing 0x 3a4 to the stack.
+[19:39:15.841] Info: Pushing 0x 248 to the stack.
+[19:39:15.841] Info: Pushing 0x 190 to the stack.
+[19:39:15.841] Info: Returning from 0x  a8 to 0x  2e
+[19:39:15.841] Info: Pushing 0x  2b to the stack.
+[19:39:15.841] Info: Pushing 0x 400 to the stack.
+[19:39:15.842] Info: Pushing 0x 300 to the stack.
+[19:39:15.842] Info: Pushing 0x 200 to the stack.
+[19:39:15.842] Info: Pushing 0x 100 to the stack.
+[19:39:15.842] Info: Returning from 0x  a8 to 0x  2b
+[19:39:15.842] Info: Pushing 0x  2e to the stack.
+[19:39:15.842] Info: Pushing 0x 400 to the stack.
+[19:39:17.652] Info: Pushing 0x 300 to the stack.
+[19:39:17.652] Info: Pushing 0x 200 to the stack.
+[19:39:17.652] Info: Pushing 0x 100 to the stack.
+[19:39:17.652] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.652] Info: Pushing 0x  2b to the stack.
+[19:39:17.652] Info: Pushing 0x 40b to the stack.
+[19:39:17.652] Info: Pushing 0x 316 to the stack.
+[19:39:17.653] Info: Pushing 0x 22c to the stack.
+[19:39:17.653] Info: Pushing 0x 159 to the stack.
+[19:39:17.653] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.653] Info: Pushing 0x  2e to the stack.
+[19:39:17.653] Info: Pushing 0x 4b3 to the stack.
+[19:39:17.653] Info: Pushing 0x 366 to the stack.
+[19:39:17.653] Info: Pushing 0x 2cc to the stack.
+[19:39:17.653] Info: Pushing 0x 198 to the stack.
+[19:39:17.653] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.654] Info: Pushing 0x  2b to the stack.
+[19:39:17.654] Info: Pushing 0x 403 to the stack.
+[19:39:17.654] Info: Pushing 0x 306 to the stack.
+[19:39:17.654] Info: Pushing 0x 20c to the stack.
+[19:39:17.654] Info: Pushing 0x 118 to the stack.
+[19:39:17.654] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.654] Info: Pushing 0x  2e to the stack.
+[19:39:17.654] Info: Pushing 0x 431 to the stack.
+[19:39:17.655] Info: Pushing 0x 362 to the stack.
+[19:39:17.655] Info: Pushing 0x 2c4 to the stack.
+[19:39:17.655] Info: Pushing 0x 188 to the stack.
+[19:39:17.655] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.655] Info: Pushing 0x  2b to the stack.
+[19:39:17.655] Info: Pushing 0x 473 to the stack.
+[19:39:17.655] Info: Pushing 0x 3e6 to the stack.
+[19:39:17.655] Info: Pushing 0x 2cd to the stack.
+[19:39:17.655] Info: Pushing 0x 19a to the stack.
+[19:39:17.655] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.655] Info: Pushing 0x  2e to the stack.
+[19:39:17.656] Info: Pushing 0x 435 to the stack.
+[19:39:17.656] Info: Pushing 0x 36a to the stack.
+[19:39:17.656] Info: Pushing 0x 2d5 to the stack.
+[19:39:17.656] Info: Pushing 0x 1ab to the stack.
+[19:39:17.656] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.656] Info: Pushing 0x  2b to the stack.
+[19:39:17.656] Info: Pushing 0x 400 to the stack.
+[19:39:17.657] Info: Pushing 0x 300 to the stack.
+[19:39:17.657] Info: Pushing 0x 200 to the stack.
+[19:39:17.657] Info: Pushing 0x 100 to the stack.
+[19:39:17.657] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.658] Info: Pushing 0x  2e to the stack.
+[19:39:17.658] Info: Pushing 0x 400 to the stack.
+[19:39:17.658] Info: Pushing 0x 300 to the stack.
+[19:39:17.658] Info: Pushing 0x 200 to the stack.
+[19:39:17.658] Info: Pushing 0x 100 to the stack.
+[19:39:17.658] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.658] Info: Pushing 0x  2b to the stack.
+[19:39:17.658] Info: Pushing 0x 483 to the stack.
+[19:39:17.658] Info: Pushing 0x 307 to the stack.
+[19:39:17.658] Info: Pushing 0x 20e to the stack.
+[19:39:17.660] Info: Pushing 0x 11c to the stack.
+[19:39:17.660] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.660] Info: Pushing 0x  2e to the stack.
+[19:39:17.660] Info: Pushing 0x 439 to the stack.
+[19:39:17.667] Info: Pushing 0x 373 to the stack.
+[19:39:17.668] Info: Pushing 0x 2e6 to the stack.
+[19:39:17.668] Info: Pushing 0x 1cc to the stack.
+[19:39:17.668] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.668] Info: Pushing 0x  2b to the stack.
+[19:39:17.668] Info: Pushing 0x 400 to the stack.
+[19:39:17.668] Info: Pushing 0x 300 to the stack.
+[19:39:17.668] Info: Pushing 0x 200 to the stack.
+[19:39:17.668] Info: Pushing 0x 100 to the stack.
+[19:39:17.668] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.668] Info: Pushing 0x  2e to the stack.
+[19:39:17.668] Info: Pushing 0x 400 to the stack.
+[19:39:17.669] Info: Pushing 0x 300 to the stack.
+[19:39:17.669] Info: Pushing 0x 200 to the stack.
+[19:39:17.669] Info: Pushing 0x 100 to the stack.
+[19:39:17.669] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.669] Info: Pushing 0x  2b to the stack.
+[19:39:17.669] Info: Pushing 0x 40c to the stack.
+[19:39:17.669] Info: Pushing 0x 318 to the stack.
+[19:39:17.669] Info: Pushing 0x 230 to the stack.
+[19:39:17.669] Info: Pushing 0x 161 to the stack.
+[19:39:17.669] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.670] Info: Pushing 0x  2e to the stack.
+[19:39:17.670] Info: Pushing 0x 4c2 to the stack.
+[19:39:17.670] Info: Pushing 0x 384 to the stack.
+[19:39:17.670] Info: Pushing 0x 208 to the stack.
+[19:39:17.670] Info: Pushing 0x 110 to the stack.
+[19:39:17.670] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.670] Info: Pushing 0x  2b to the stack.
+[19:39:17.670] Info: Pushing 0x 400 to the stack.
+[19:39:17.670] Info: Pushing 0x 300 to the stack.
+[19:39:17.670] Info: Pushing 0x 200 to the stack.
+[19:39:17.670] Info: Pushing 0x 100 to the stack.
+[19:39:17.671] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.671] Info: Pushing 0x  2e to the stack.
+[19:39:17.671] Info: Pushing 0x 400 to the stack.
+[19:39:17.671] Info: Pushing 0x 300 to the stack.
+[19:39:17.671] Info: Pushing 0x 200 to the stack.
+[19:39:17.671] Info: Pushing 0x 100 to the stack.
+[19:39:17.671] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.671] Info: Pushing 0x  2b to the stack.
+[19:39:17.671] Info: Pushing 0x 40d to the stack.
+[19:39:17.671] Info: Pushing 0x 31a to the stack.
+[19:39:17.671] Info: Pushing 0x 234 to the stack.
+[19:39:17.671] Info: Pushing 0x 169 to the stack.
+[19:39:17.671] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.671] Info: Pushing 0x  2e to the stack.
+[19:39:17.672] Info: Pushing 0x 4d2 to the stack.
+[19:39:17.672] Info: Pushing 0x 3a4 to the stack.
+[19:39:17.672] Info: Pushing 0x 248 to the stack.
+[19:39:17.672] Info: Pushing 0x 190 to the stack.
+[19:39:17.672] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.672] Info: Pushing 0x  2b to the stack.
+[19:39:17.672] Info: Pushing 0x 400 to the stack.
+[19:39:17.672] Info: Pushing 0x 300 to the stack.
+[19:39:17.672] Info: Pushing 0x 200 to the stack.
+[19:39:17.672] Info: Pushing 0x 100 to the stack.
+[19:39:17.672] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.672] Info: Pushing 0x  2e to the stack.
+[19:39:17.673] Info: Pushing 0x 400 to the stack.
+[19:39:17.673] Info: Pushing 0x 300 to the stack.
+[19:39:17.673] Info: Pushing 0x 200 to the stack.
+[19:39:17.673] Info: Pushing 0x 100 to the stack.
+[19:39:17.673] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.673] Info: Pushing 0x  2b to the stack.
+[19:39:17.673] Info: Pushing 0x 408 to the stack.
+[19:39:17.673] Info: Pushing 0x 310 to the stack.
+[19:39:17.673] Info: Pushing 0x 220 to the stack.
+[19:39:17.673] Info: Pushing 0x 141 to the stack.
+[19:39:17.673] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.673] Info: Pushing 0x  2e to the stack.
+[19:39:17.673] Info: Pushing 0x 482 to the stack.
+[19:39:17.673] Info: Pushing 0x 304 to the stack.
+[19:39:17.674] Info: Pushing 0x 208 to the stack.
+[19:39:17.674] Info: Pushing 0x 110 to the stack.
+[19:39:17.674] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.674] Info: Pushing 0x  2b to the stack.
+[19:39:17.674] Info: Pushing 0x 411 to the stack.
+[19:39:17.674] Info: Pushing 0x 322 to the stack.
+[19:39:17.674] Info: Pushing 0x 244 to the stack.
+[19:39:17.674] Info: Pushing 0x 188 to the stack.
+[19:39:17.674] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.674] Info: Pushing 0x  2e to the stack.
+[19:39:17.674] Info: Pushing 0x 410 to the stack.
+[19:39:17.675] Info: Pushing 0x 320 to the stack.
+[19:39:17.675] Info: Pushing 0x 240 to the stack.
+[19:39:17.675] Info: Pushing 0x 180 to the stack.
+[19:39:17.675] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.675] Info: Pushing 0x  2b to the stack.
+[19:39:17.675] Info: Pushing 0x 41f to the stack.
+[19:39:17.675] Info: Pushing 0x 33e to the stack.
+[19:39:17.675] Info: Pushing 0x 27c to the stack.
+[19:39:17.675] Info: Pushing 0x 1f9 to the stack.
+[19:39:17.675] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.675] Info: Pushing 0x  2e to the stack.
+[19:39:17.675] Info: Pushing 0x 4f3 to the stack.
+[19:39:17.675] Info: Pushing 0x 3e6 to the stack.
+[19:39:17.676] Info: Pushing 0x 2cc to the stack.
+[19:39:17.676] Info: Pushing 0x 198 to the stack.
+[19:39:17.676] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.676] Info: Pushing 0x  2b to the stack.
+[19:39:17.676] Info: Pushing 0x 488 to the stack.
+[19:39:17.676] Info: Pushing 0x 311 to the stack.
+[19:39:17.676] Info: Pushing 0x 222 to the stack.
+[19:39:17.676] Info: Pushing 0x 145 to the stack.
+[19:39:17.676] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.676] Info: Pushing 0x  2e to the stack.
+[19:39:17.676] Info: Pushing 0x 48a to the stack.
+[19:39:17.676] Info: Pushing 0x 315 to the stack.
+[19:39:17.676] Info: Pushing 0x 22a to the stack.
+[19:39:17.677] Info: Pushing 0x 154 to the stack.
+[19:39:17.677] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.677] Info: Pushing 0x  2b to the stack.
+[19:39:17.677] Info: Pushing 0x 489 to the stack.
+[19:39:17.677] Info: Pushing 0x 313 to the stack.
+[19:39:17.677] Info: Pushing 0x 226 to the stack.
+[19:39:17.677] Info: Pushing 0x 14d to the stack.
+[19:39:17.677] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.677] Info: Pushing 0x  2e to the stack.
+[19:39:17.677] Info: Pushing 0x 49a to the stack.
+[19:39:17.678] Info: Pushing 0x 335 to the stack.
+[19:39:17.678] Info: Pushing 0x 26a to the stack.
+[19:39:17.678] Info: Pushing 0x 1d4 to the stack.
+[19:39:17.678] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.678] Info: Pushing 0x  2b to the stack.
+[19:39:17.678] Info: Pushing 0x 400 to the stack.
+[19:39:17.678] Info: Pushing 0x 300 to the stack.
+[19:39:17.678] Info: Pushing 0x 200 to the stack.
+[19:39:17.678] Info: Pushing 0x 100 to the stack.
+[19:39:17.678] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.678] Info: Pushing 0x  2e to the stack.
+[19:39:17.678] Info: Pushing 0x 400 to the stack.
+[19:39:17.678] Info: Pushing 0x 300 to the stack.
+[19:39:17.678] Info: Pushing 0x 200 to the stack.
+[19:39:17.680] Info: Pushing 0x 100 to the stack.
+[19:39:17.680] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.680] Info: Pushing 0x  2b to the stack.
+[19:39:17.680] Info: Pushing 0x 40e to the stack.
+[19:39:17.680] Info: Pushing 0x 31c to the stack.
+[19:39:17.680] Info: Pushing 0x 238 to the stack.
+[19:39:17.680] Info: Pushing 0x 171 to the stack.
+[19:39:17.680] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.680] Info: Pushing 0x  2e to the stack.
+[19:39:17.681] Info: Pushing 0x 4e3 to the stack.
+[19:39:17.681] Info: Pushing 0x 3c6 to the stack.
+[19:39:17.681] Info: Pushing 0x 28c to the stack.
+[19:39:17.681] Info: Pushing 0x 118 to the stack.
+[19:39:17.681] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.681] Info: Pushing 0x  2b to the stack.
+[19:39:17.681] Info: Pushing 0x 4dc to the stack.
+[19:39:17.681] Info: Pushing 0x 3b9 to the stack.
+[19:39:17.681] Info: Pushing 0x 272 to the stack.
+[19:39:17.682] Info: Pushing 0x 1e5 to the stack.
+[19:39:17.682] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.682] Info: Pushing 0x  2e to the stack.
+[19:39:17.682] Info: Pushing 0x 4ca to the stack.
+[19:39:17.682] Info: Pushing 0x 395 to the stack.
+[19:39:17.682] Info: Pushing 0x 22b to the stack.
+[19:39:17.682] Info: Pushing 0x 156 to the stack.
+[19:39:17.682] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.682] Info: Pushing 0x  2b to the stack.
+[19:39:17.682] Info: Pushing 0x 4cc to the stack.
+[19:39:17.682] Info: Pushing 0x 399 to the stack.
+[19:39:17.682] Info: Pushing 0x 232 to the stack.
+[19:39:17.682] Info: Pushing 0x 165 to the stack.
+[19:39:17.683] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.683] Info: Pushing 0x  2e to the stack.
+[19:39:17.683] Info: Pushing 0x 4ca to the stack.
+[19:39:17.683] Info: Pushing 0x 395 to the stack.
+[19:39:17.683] Info: Pushing 0x 22b to the stack.
+[19:39:17.683] Info: Pushing 0x 156 to the stack.
+[19:39:17.683] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.683] Info: Pushing 0x  2b to the stack.
+[19:39:17.683] Info: Pushing 0x 46e to the stack.
+[19:39:17.683] Info: Pushing 0x 3dc to the stack.
+[19:39:17.683] Info: Pushing 0x 2b9 to the stack.
+[19:39:17.683] Info: Pushing 0x 173 to the stack.
+[19:39:17.683] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.683] Info: Pushing 0x  2e to the stack.
+[19:39:17.684] Info: Pushing 0x 4e7 to the stack.
+[19:39:17.684] Info: Pushing 0x 3ce to the stack.
+[19:39:17.684] Info: Pushing 0x 29d to the stack.
+[19:39:17.684] Info: Pushing 0x 13b to the stack.
+[19:39:17.684] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.684] Info: Pushing 0x  2b to the stack.
+[19:39:17.684] Info: Pushing 0x 4e6 to the stack.
+[19:39:17.684] Info: Pushing 0x 3cd to the stack.
+[19:39:17.684] Info: Pushing 0x 29b to the stack.
+[19:39:17.684] Info: Pushing 0x 136 to the stack.
+[19:39:17.684] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.684] Info: Pushing 0x  2e to the stack.
+[19:39:17.684] Info: Pushing 0x 46d to the stack.
+[19:39:17.684] Info: Pushing 0x 3db to the stack.
+[19:39:17.685] Info: Pushing 0x 2b7 to the stack.
+[19:39:17.685] Info: Pushing 0x 16f to the stack.
+[19:39:17.685] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.685] Info: Pushing 0x  2b to the stack.
+[19:39:17.685] Info: Pushing 0x 4dd to the stack.
+[19:39:17.685] Info: Pushing 0x 3bb to the stack.
+[19:39:17.685] Info: Pushing 0x 276 to the stack.
+[19:39:17.685] Info: Pushing 0x 1ed to the stack.
+[19:39:17.686] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.686] Info: Pushing 0x  2e to the stack.
+[19:39:17.686] Info: Pushing 0x 4da to the stack.
+[19:39:17.686] Info: Pushing 0x 3b5 to the stack.
+[19:39:17.686] Info: Pushing 0x 26b to the stack.
+[19:39:17.686] Info: Pushing 0x 1d6 to the stack.
+[19:39:17.686] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.686] Info: Pushing 0x  2b to the stack.
+[19:39:17.686] Info: Pushing 0x 4dd to the stack.
+[19:39:17.686] Info: Pushing 0x 3bb to the stack.
+[19:39:17.686] Info: Pushing 0x 276 to the stack.
+[19:39:17.686] Info: Pushing 0x 1ed to the stack.
+[19:39:17.686] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.686] Info: Pushing 0x  2e to the stack.
+[19:39:17.688] Info: Pushing 0x 4da to the stack.
+[19:39:17.688] Info: Pushing 0x 3b5 to the stack.
+[19:39:17.688] Info: Pushing 0x 26b to the stack.
+[19:39:17.688] Info: Pushing 0x 1d6 to the stack.
+[19:39:17.689] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.689] Info: Pushing 0x  2b to the stack.
+[19:39:17.689] Info: Pushing 0x 4d9 to the stack.
+[19:39:17.689] Info: Pushing 0x 3b3 to the stack.
+[19:39:17.689] Info: Pushing 0x 266 to the stack.
+[19:39:17.689] Info: Pushing 0x 1cd to the stack.
+[19:39:17.689] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.689] Info: Pushing 0x  2e to the stack.
+[19:39:17.689] Info: Pushing 0x 49a to the stack.
+[19:39:17.689] Info: Pushing 0x 335 to the stack.
+[19:39:17.689] Info: Pushing 0x 26b to the stack.
+[19:39:17.689] Info: Pushing 0x 1d6 to the stack.
+[19:39:17.689] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.689] Info: Pushing 0x  2b to the stack.
+[19:39:17.689] Info: Pushing 0x 499 to the stack.
+[19:39:17.689] Info: Pushing 0x 333 to the stack.
+[19:39:17.689] Info: Pushing 0x 266 to the stack.
+[19:39:17.690] Info: Pushing 0x 1cd to the stack.
+[19:39:17.690] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.690] Info: Pushing 0x  2e to the stack.
+[19:39:17.690] Info: Pushing 0x 49a to the stack.
+[19:39:17.690] Info: Pushing 0x 335 to the stack.
+[19:39:17.690] Info: Pushing 0x 26a to the stack.
+[19:39:17.690] Info: Pushing 0x 1d4 to the stack.
+[19:39:17.690] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.690] Info: Pushing 0x  2b to the stack.
+[19:39:17.690] Info: Pushing 0x 4bb to the stack.
+[19:39:17.690] Info: Pushing 0x 377 to the stack.
+[19:39:17.690] Info: Pushing 0x 2ef to the stack.
+[19:39:17.690] Info: Pushing 0x 1df to the stack.
+[19:39:17.690] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.690] Info: Pushing 0x  2e to the stack.
+[19:39:17.690] Info: Pushing 0x 4bf to the stack.
+[19:39:17.691] Info: Pushing 0x 37f to the stack.
+[19:39:17.691] Info: Pushing 0x 2fe to the stack.
+[19:39:17.691] Info: Pushing 0x 1fd to the stack.
+[19:39:17.691] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.691] Info: Pushing 0x  2b to the stack.
+[19:39:17.691] Info: Pushing 0x 4bb to the stack.
+[19:39:17.691] Info: Pushing 0x 377 to the stack.
+[19:39:17.691] Info: Pushing 0x 2ef to the stack.
+[19:39:17.691] Info: Pushing 0x 1df to the stack.
+[19:39:17.691] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.691] Info: Pushing 0x  2e to the stack.
+[19:39:17.691] Info: Pushing 0x 4bf to the stack.
+[19:39:17.691] Info: Pushing 0x 37f to the stack.
+[19:39:17.691] Info: Pushing 0x 2fe to the stack.
+[19:39:17.691] Info: Pushing 0x 1fd to the stack.
+[19:39:17.691] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.691] Info: Pushing 0x  2b to the stack.
+[19:39:17.691] Info: Pushing 0x 467 to the stack.
+[19:39:17.692] Info: Pushing 0x 3ce to the stack.
+[19:39:17.692] Info: Pushing 0x 29d to the stack.
+[19:39:17.694] Info: Pushing 0x 13a to the stack.
+[19:39:17.694] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.694] Info: Pushing 0x  2e to the stack.
+[19:39:17.694] Info: Pushing 0x 475 to the stack.
+[19:39:17.694] Info: Pushing 0x 3ea to the stack.
+[19:39:17.694] Info: Pushing 0x 2d5 to the stack.
+[19:39:17.694] Info: Pushing 0x 1ab to the stack.
+[19:39:17.694] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.694] Info: Pushing 0x  2b to the stack.
+[19:39:17.694] Info: Pushing 0x 463 to the stack.
+[19:39:17.694] Info: Pushing 0x 3c6 to the stack.
+[19:39:17.694] Info: Pushing 0x 28d to the stack.
+[19:39:17.694] Info: Pushing 0x 11a to the stack.
+[19:39:17.694] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.694] Info: Pushing 0x  2e to the stack.
+[19:39:17.694] Info: Pushing 0x 435 to the stack.
+[19:39:17.694] Info: Pushing 0x 36a to the stack.
+[19:39:17.694] Info: Pushing 0x 2d5 to the stack.
+[19:39:17.695] Info: Pushing 0x 1ab to the stack.
+[19:39:17.695] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.695] Info: Pushing 0x  2b to the stack.
+[19:39:17.695] Info: Pushing 0x 46e to the stack.
+[19:39:17.695] Info: Pushing 0x 3dc to the stack.
+[19:39:17.695] Info: Pushing 0x 2b9 to the stack.
+[19:39:17.695] Info: Pushing 0x 173 to the stack.
+[19:39:17.695] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.695] Info: Pushing 0x  2e to the stack.
+[19:39:17.695] Info: Pushing 0x 4e7 to the stack.
+[19:39:17.695] Info: Pushing 0x 3ce to the stack.
+[19:39:17.695] Info: Pushing 0x 29d to the stack.
+[19:39:17.695] Info: Pushing 0x 13b to the stack.
+[19:39:17.695] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.696] Info: Pushing 0x  2b to the stack.
+[19:39:17.696] Info: Pushing 0x 40e to the stack.
+[19:39:17.696] Info: Pushing 0x 31c to the stack.
+[19:39:17.696] Info: Pushing 0x 238 to the stack.
+[19:39:17.696] Info: Pushing 0x 171 to the stack.
+[19:39:17.696] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.696] Info: Pushing 0x  2e to the stack.
+[19:39:17.696] Info: Pushing 0x 4e3 to the stack.
+[19:39:17.696] Info: Pushing 0x 3c6 to the stack.
+[19:39:17.696] Info: Pushing 0x 28c to the stack.
+[19:39:17.696] Info: Pushing 0x 118 to the stack.
+[19:39:17.696] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.696] Info: Pushing 0x  2b to the stack.
+[19:39:17.696] Info: Pushing 0x 4ec to the stack.
+[19:39:17.696] Info: Pushing 0x 3d9 to the stack.
+[19:39:17.696] Info: Pushing 0x 2b3 to the stack.
+[19:39:17.696] Info: Pushing 0x 167 to the stack.
+[19:39:17.696] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.696] Info: Pushing 0x  2e to the stack.
+[19:39:17.696] Info: Pushing 0x 4ce to the stack.
+[19:39:17.697] Info: Pushing 0x 39d to the stack.
+[19:39:17.697] Info: Pushing 0x 23b to the stack.
+[19:39:17.697] Info: Pushing 0x 177 to the stack.
+[19:39:17.697] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.697] Info: Pushing 0x  2b to the stack.
+[19:39:17.698] Info: Pushing 0x 4cc to the stack.
+[19:39:17.698] Info: Pushing 0x 399 to the stack.
+[19:39:17.698] Info: Pushing 0x 232 to the stack.
+[19:39:17.698] Info: Pushing 0x 165 to the stack.
+[19:39:17.698] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.698] Info: Pushing 0x  2e to the stack.
+[19:39:17.698] Info: Pushing 0x 4ca to the stack.
+[19:39:17.698] Info: Pushing 0x 395 to the stack.
+[19:39:17.698] Info: Pushing 0x 22b to the stack.
+[19:39:17.698] Info: Pushing 0x 156 to the stack.
+[19:39:17.699] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.699] Info: Pushing 0x  2b to the stack.
+[19:39:17.699] Info: Pushing 0x 4dd to the stack.
+[19:39:17.699] Info: Pushing 0x 3bb to the stack.
+[19:39:17.699] Info: Pushing 0x 276 to the stack.
+[19:39:17.699] Info: Pushing 0x 1ed to the stack.
+[19:39:17.699] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.699] Info: Pushing 0x  2e to the stack.
+[19:39:17.699] Info: Pushing 0x 4da to the stack.
+[19:39:17.699] Info: Pushing 0x 3b5 to the stack.
+[19:39:17.699] Info: Pushing 0x 26b to the stack.
+[19:39:17.699] Info: Pushing 0x 1d6 to the stack.
+[19:39:17.699] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.699] Info: Pushing 0x  2b to the stack.
+[19:39:17.699] Info: Pushing 0x 4dc to the stack.
+[19:39:17.699] Info: Pushing 0x 3b9 to the stack.
+[19:39:17.699] Info: Pushing 0x 272 to the stack.
+[19:39:17.700] Info: Pushing 0x 1e5 to the stack.
+[19:39:17.700] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.700] Info: Pushing 0x  2e to the stack.
+[19:39:17.700] Info: Pushing 0x 4ca to the stack.
+[19:39:17.700] Info: Pushing 0x 395 to the stack.
+[19:39:17.700] Info: Pushing 0x 22b to the stack.
+[19:39:17.700] Info: Pushing 0x 156 to the stack.
+[19:39:17.700] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.700] Info: Pushing 0x  2b to the stack.
+[19:39:17.700] Info: Pushing 0x 499 to the stack.
+[19:39:17.700] Info: Pushing 0x 333 to the stack.
+[19:39:17.700] Info: Pushing 0x 266 to the stack.
+[19:39:17.700] Info: Pushing 0x 1cd to the stack.
+[19:39:17.700] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.700] Info: Pushing 0x  2e to the stack.
+[19:39:17.700] Info: Pushing 0x 49a to the stack.
+[19:39:17.700] Info: Pushing 0x 335 to the stack.
+[19:39:17.700] Info: Pushing 0x 26a to the stack.
+[19:39:17.701] Info: Pushing 0x 1d4 to the stack.
+[19:39:17.701] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.702] Info: Pushing 0x  2b to the stack.
+[19:39:17.702] Info: Pushing 0x 49f to the stack.
+[19:39:17.702] Info: Pushing 0x 33f to the stack.
+[19:39:17.702] Info: Pushing 0x 27e to the stack.
+[19:39:17.702] Info: Pushing 0x 1fd to the stack.
+[19:39:17.702] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.702] Info: Pushing 0x  2e to the stack.
+[19:39:17.702] Info: Pushing 0x 4fb to the stack.
+[19:39:17.702] Info: Pushing 0x 3f7 to the stack.
+[19:39:17.702] Info: Pushing 0x 2ee to the stack.
+[19:39:17.702] Info: Pushing 0x 1dc to the stack.
+[19:39:17.702] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.702] Info: Pushing 0x  2b to the stack.
+[19:39:17.702] Info: Pushing 0x 4bb to the stack.
+[19:39:17.702] Info: Pushing 0x 377 to the stack.
+[19:39:17.702] Info: Pushing 0x 2ef to the stack.
+[19:39:17.703] Info: Pushing 0x 1df to the stack.
+[19:39:17.703] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.703] Info: Pushing 0x  2e to the stack.
+[19:39:17.703] Info: Pushing 0x 4bf to the stack.
+[19:39:17.703] Info: Pushing 0x 37f to the stack.
+[19:39:17.703] Info: Pushing 0x 2fe to the stack.
+[19:39:17.703] Info: Pushing 0x 1fd to the stack.
+[19:39:17.703] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.703] Info: Pushing 0x  2b to the stack.
+[19:39:17.703] Info: Pushing 0x 4b9 to the stack.
+[19:39:17.703] Info: Pushing 0x 373 to the stack.
+[19:39:17.703] Info: Pushing 0x 2e7 to the stack.
+[19:39:17.703] Info: Pushing 0x 1cf to the stack.
+[19:39:17.703] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.703] Info: Pushing 0x  2e to the stack.
+[19:39:17.703] Info: Pushing 0x 49e to the stack.
+[19:39:17.703] Info: Pushing 0x 33d to the stack.
+[19:39:17.703] Info: Pushing 0x 27a to the stack.
+[19:39:17.705] Info: Pushing 0x 1f5 to the stack.
+[19:39:17.705] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.705] Info: Pushing 0x  2b to the stack.
+[19:39:17.705] Info: Pushing 0x 433 to the stack.
+[19:39:17.705] Info: Pushing 0x 366 to the stack.
+[19:39:17.705] Info: Pushing 0x 2cd to the stack.
+[19:39:17.705] Info: Pushing 0x 19a to the stack.
+[19:39:17.705] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.705] Info: Pushing 0x  2e to the stack.
+[19:39:17.705] Info: Pushing 0x 435 to the stack.
+[19:39:17.705] Info: Pushing 0x 36a to the stack.
+[19:39:17.705] Info: Pushing 0x 2d4 to the stack.
+[19:39:17.705] Info: Pushing 0x 1a9 to the stack.
+[19:39:17.705] Info: Returning from 0x  a8 to 0x  2e
+[19:39:17.705] Info: Pushing 0x  2b to the stack.
+[19:39:17.705] Info: Pushing 0x 43e to the stack.
+[19:39:17.705] Info: Pushing 0x 37c to the stack.
+[19:39:17.705] Info: Pushing 0x 2f9 to the stack.
+[19:39:17.705] Info: Pushing 0x 1f3 to the stack.
+[19:39:17.705] Info: Returning from 0x  a8 to 0x  2b
+[19:39:17.705] Info: Pushing 0x  2e to the stack.
+[19:39:17.705] Info: Pushing 0x 4e7 to the stack.
+[19:39:17.706] Info: Pushing 0x 3ce to the stack.
+[19:39:17.706] Info: Pushing 0x 29c to the stack.
+[19:39:17.706] Info: Pushing 0x 139 to the stack.
+[19:39:17.706] Info: Returning from 0x  a8 to 0x  2e
+[19:39:22.038] Info: Pushing 0x 153 to the stack.
+[19:39:22.042] Info: Returning from 0x2c20 to 0x 153
+[19:39:22.042] Info: Pushing 0x 159 to the stack.
+[19:39:22.042] Info: Returning from 0x2b94 to 0x 159
+[19:39:22.042] Info: Pushing 0x 15e to the stack.
+[19:39:22.056] Info: Returning from 0x2c47 to 0x 15e
+[19:39:22.136] Info: Pushing 0x 19a to the stack.
+[19:39:22.136] Info: Returning from 0x71de to 0x 19a
+[19:39:22.136] Info: Pushing 0x 1c5 to the stack.
+[19:39:22.136] Info: Pushing 0x1f8c to the stack.
+[19:39:22.136] Info: Pushing 0x  80 to the stack.
+[19:39:22.136] Info: Pushing 0x  ff to the stack.
+[19:39:22.136] Info: Pushing 0xf810 to the stack.
+[19:39:22.136] Info: Pushing 0xc000 to the stack.
+[19:39:22.139] Info: Returning from 0x2c38 to 0x1f8c
+[19:39:22.139] Info: Returning from 0x1f8d to 0x 1c5
+[19:39:22.139] Info: Pushing 0x 1c8 to the stack.
+[19:39:22.139] Info: Pushing 0x 203 to the stack.
+[19:39:22.139] Info: Pushing 0x  80 to the stack.
+[19:39:22.139] Info: Pushing 0x 168 to the stack.
+[19:39:22.139] Info: Pushing 0xf810 to the stack.
+[19:39:22.140] Info: Pushing 0xc100 to the stack.
+[19:39:22.144] Info: Returning from 0x2c38 to 0x 203
+[19:39:22.144] Info: Pushing 0x 206 to the stack.
+[19:39:22.144] Info: Pushing 0x 168 to the stack.
+[19:39:22.144] Info: Pushing 0x1b92 to the stack.
+[19:39:22.144] Info: Pushing 0x 168 to the stack.
+[19:39:22.144] Info: Pushing 0xf810 to the stack.
+[19:39:22.144] Info: Pushing 0xc100 to the stack.
+[19:39:22.144] Info: Pushing 0x   0 to the stack.
+[19:39:22.144] Info: Pushing 0x3eff to the stack.
+[19:39:22.144] Info: Returning from 0x27bd to 0x1b92
+[19:39:22.144] Info: Pushing 0xffa0 to the stack.
+[19:39:22.144] Info: Pushing 0x1b96 to the stack.
+[19:39:22.144] Info: Pushing 0xc100 to the stack.
+[19:39:22.144] Info: Pushing 0x 168 to the stack.
+[19:39:22.144] Info: Pushing 0x1bae to the stack.
+[19:39:22.144] Info: Pushing 0x 168 to the stack.
+[19:39:22.144] Info: Pushing 0xf810 to the stack.
+[19:39:22.145] Info: Returning from 0x1f4d to 0x1bae
+[19:39:22.145] Info: Returning from 0x1bc4 to 0x1b96
+[19:39:22.145] Info: Pushing 0x1b99 to the stack.
+[19:39:22.145] Info: Returning from 0x1f7f to 0x1b99
+[19:39:22.145] Warning: Attempting to write to ROM at address: 0x   0.
+[19:39:22.145] Info: Pushing 0x 167 to the stack.
+[19:39:22.145] Info: Pushing 0x1b92 to the stack.
+[19:39:22.145] Info: Pushing 0x 167 to the stack.
+[19:39:22.145] Info: Pushing 0x   0 to the stack.
+[19:39:22.145] Info: Pushing 0xc101 to the stack.
+[19:39:22.145] Info: Pushing 0x   f to the stack.
+[19:39:22.145] Info: Pushing 0x3eff to the stack.
+[19:39:22.145] Info: Returning from 0x27bd to 0x1b92
+[19:39:22.145] Info: Pushing 0xffa0 to the stack.
+[19:39:22.145] Info: Pushing 0x1b96 to the stack.
+[19:39:22.145] Info: Pushing 0xc101 to the stack.
+[19:39:22.145] Info: Pushing 0x 167 to the stack.
+[19:39:22.145] Info: Pushing 0x1bae to the stack.
+[19:39:22.145] Info: Pushing 0x 167 to the stack.
+[19:39:22.145] Info: Pushing 0x   0 to the stack.
+[19:39:22.146] Info: Returning from 0x1f4d to 0x1bae
+[19:39:22.147] Info: Returning from 0x1bc4 to 0x1b96
+[19:39:22.147] Info: Pushing 0x1b99 to the stack.
+[19:39:22.147] Info: Returning from 0x1f7f to 0xffa0
+[19:39:22.147] Info: Pushing 0xfbc3 to the stack.
+[19:39:22.148] Info: Returning from 0xff8a to 0x   0
+[19:39:22.148] Info: Pushing 0xfbc3 to the stack.
+[19:39:22.152] Info: Returning from 0xff47 to 0x   0
+[19:39:22.152] Info: Pushing 0xfbc3 to the stack.
+[19:39:22.152] Error: Unimplemented opcode 0xfd at 0xfbc4!
