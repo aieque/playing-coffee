@@ -1,9 +1,0 @@
-package playingcoffee.core.cpu;
-
-public class Opcode {
-
-	public Opcode(MicroOp ops...) {
-		
-	}
-	
-}

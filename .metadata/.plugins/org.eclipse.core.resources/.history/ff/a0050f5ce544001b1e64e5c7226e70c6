@@ -1,8 +1,0 @@
-package playingcoffee.core;
-
-public class Memory {
-
-	// Note: Memory will be made into a more complicated class.
-	// This is just temporary.
-	
-}
