@@ -17,11 +17,15 @@ public class PPU {
 		this.mmu = mmu;
 		this.interruptManager = interruptManager;
 		
-		registers = new PPURegisters();
+		registers = new PPURegisters(this);
 		vram = new VRAM();
 		
 		this.mmu.connectMemorySpace(registers);
 		this.mmu.connectMemorySpace(vram);
+	}
+	
+	public void onLCDDisable() {
+		clockCount = 0;
 	}
 	
 	public void OAMSeach() {

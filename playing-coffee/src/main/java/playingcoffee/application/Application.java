@@ -40,7 +40,7 @@ public class Application extends Canvas implements Runnable {
 		
 		int tileDataOffset = ((lcdControl & 0x10) != 0) ? 0x8000 : 0x8800;
 		
-		for (int tile = 0; tile < 512; tile++) {
+		/*for (int tile = 0; tile < 512; tile++) {
 			int tileIndex = tile;
 			for (int y = 0; y < 8; y++) {
 				for (int n = 0; n < 8; n++) {
@@ -48,11 +48,11 @@ public class Application extends Canvas implements Runnable {
 							    (((gameBoy.getMMU().read(0x8000 + y * 2 + tileIndex * 16)     >> (7 - n)) & 1));
 					
 					g.setColor(new Color(value * 64, value * 64, value * 64));
-					if (value != 0x0)
-						g.fillRect((n + (tile % 16) * 8), (y + (tile / 16) * 8), 1, 1);
+					//if (value != 0x0)
+						//g.fillRect((n + (tile % 16) * 8), (y + (tile / 16) * 8), 1, 1);
 				}
 			}
-		}
+		}*/
 		
 		if ((lcdControl & 0x80) != 0) {
 			for (int tileY = 0; tileY < 32; tileY++) {

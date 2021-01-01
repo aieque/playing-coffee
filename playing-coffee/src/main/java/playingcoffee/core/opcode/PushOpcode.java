@@ -16,11 +16,7 @@ public class PushOpcode implements Opcode {
 	public int run(Registers registers, MMU mmu) {
 		int value = register.read(registers, mmu);
 		
-		registers.decSP();
-		mmu.write(value >> 8, registers.getSP());
-		
-		registers.decSP();
-		mmu.write(value, registers.getSP());
+		mmu.pushStack(value, registers);
 		
 		Log.info("Pushing 0x%4x to the stack.", value);
 		

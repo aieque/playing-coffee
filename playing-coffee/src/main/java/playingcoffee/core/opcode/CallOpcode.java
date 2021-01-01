@@ -26,10 +26,7 @@ public class CallOpcode implements Opcode {
 		int addressToJump = address.read(registers, mmu);
 		
 		if (canExecute(registers)) {
-			registers.decSP();
-			mmu.write(registers.getPC() >> 8, registers.getSP());
-			registers.decSP();
-			mmu.write(registers.getPC(), registers.getSP());
+			mmu.pushStack(registers.getPC(), registers);
 			
 			Log.info("Pushing 0x%4x to the stack.", registers.getPC());
 			

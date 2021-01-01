@@ -20,7 +20,7 @@ public class RotateAOpcode implements Opcode {
 	@Override
 	public int run(Registers registers, MMU mmu) {
 		if (direction == LEFT) {
-			if (withCarry) {
+			if (withCarry) { // NOTE: Tetris does not use this opcode.
 				int value = registers.getA();
 				int result = (value << 1) | ((value >> 7) & 1);
 
@@ -28,7 +28,7 @@ public class RotateAOpcode implements Opcode {
 				registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
 				
 				registers.setA(result);
-			} else {
+			} else { // NOTE: Tetris only uses this opcode.
 				int value = registers.getA();
 				int result = (value << 1) | (registers.getFlags().get(Flags.CARRY) ? 1 : 0);
 				
@@ -37,7 +37,7 @@ public class RotateAOpcode implements Opcode {
 				
 				registers.setA(result);				
 			}
-		} else {
+		} else { // NOTE: Tetris does not use this opcode.
 			if (withCarry) {
 				int value = registers.getA();
 				int result = (value >> 1) | ((value & 1) << 7);
@@ -46,7 +46,7 @@ public class RotateAOpcode implements Opcode {
 				registers.getFlags().set(Flags.CARRY, (value & 1) != 0);
 				
 				registers.setA(result);
-			} else {
+			} else { // NOTE: Tetris does not use this opcode.
 				int value = registers.getA();
 				int result = (value >> 1) | ((registers.getFlags().get(Flags.CARRY) ? 1 : 0) << 7);
 				

@@ -20,6 +20,8 @@ public class ShiftOpcode implements Opcode {
 		SLA, SRA, SRL
 	}
 
+	// NOTE: Tetris does not use these opcodes.
+	
 	@Override
 	public int run(Registers registers, MMU mmu) {
 		int value, result;
@@ -43,7 +45,7 @@ public class ShiftOpcode implements Opcode {
 			break;
 		case SRL:
 			value = register.read(registers, mmu);
-			result = (value >> 1);
+			result = (value >> 1) | ((value << 7) & 0x80);
 			
 			registers.getFlags().set(Flags.ZERO, result == 0);
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);

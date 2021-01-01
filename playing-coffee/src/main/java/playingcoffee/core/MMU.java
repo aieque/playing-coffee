@@ -6,6 +6,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import playingcoffee.core.cpu.Registers;
+
 public class MMU {
 
 	private int[] memory;
@@ -87,6 +89,23 @@ public class MMU {
 		memory[address] = value & 0xFF;
 	}
 
+	public int popStack(Registers registers) {
+		int value = read(registers.getSP());
+		registers.incSP();
+		
+		value |= read(registers.getSP()) << 8;
+		registers.incSP();
+		
+		return value;
+	}
+	
+	public void pushStack(int value, Registers registers) {
+		registers.decSP();
+		write(value >> 8, registers.getSP());
+		registers.decSP();
+		write(value, registers.getSP());
+	}
+	
 	public int[] getMemory() {
 		return memory;
 	}

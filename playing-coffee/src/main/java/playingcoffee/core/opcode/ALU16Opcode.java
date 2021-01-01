@@ -31,10 +31,10 @@ public class ALU16Opcode implements Opcode {
 			result = registers.getHL() + value;
 			
 			registers.getFlags().set(Flags.NEGATIVE, false);
-			registers.getFlags().set(Flags.HALF_CARRY, ((value & 0xF) + (registers.getHL() & 0xF) > 0xF));
+			registers.getFlags().set(Flags.HALF_CARRY, ((value & 0xF0) + (registers.getHL() & 0xF0) > 0xF0));
 			registers.getFlags().set(Flags.CARRY, (result & 0xFFFF0000) != 0);
 			
-			register.write(result, registers, mmu);
+			registers.setHL(result);
 			
 			break;
 		default:
@@ -42,7 +42,7 @@ public class ALU16Opcode implements Opcode {
 			break;
 		}
 		
-		return register.getCycles() + 4;
+		return register.getCycles() * (type == ALU16Type.ADD ? 1 : 2);
 	}
 
 	public enum ALU16Type {

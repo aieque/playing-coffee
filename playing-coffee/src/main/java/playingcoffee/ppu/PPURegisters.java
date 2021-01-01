@@ -14,6 +14,13 @@ public class PPURegisters implements MemorySpace {
 	public int objPalette0, objPalette1; // 0xFF48 - 0xFF49
 	public int windowY, windowX; // 0xFF4A - 0xFF4B
 	
+	@SuppressWarnings("unused")
+	private final PPU ppu;
+	
+	public PPURegisters(PPU ppu) {
+		this.ppu = ppu;
+	}
+
 	public void setLCDCMode(int mode) {
 		lcdcStatus = (lcdcStatus & 0xFC) | mode;
 	}
@@ -43,6 +50,7 @@ public class PPURegisters implements MemorySpace {
 			case 0xFF41: lcdcStatus = value; return;
 			case 0xFF42: scrollY = value; return;
 			case 0xFF43: scrollX = value; return;
+			case 0xFF44: return;
 			case 0xFF45: lyCompare = value; return;
 			case 0xFF46: dmaTransferStart = value; return; // TODO: Do DMA (I have no idea how to do it though...)
 			case 0xFF47: bgPalette = value; return;

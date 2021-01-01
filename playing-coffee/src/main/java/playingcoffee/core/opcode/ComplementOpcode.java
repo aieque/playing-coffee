@@ -10,7 +10,7 @@ public class ComplementOpcode implements Opcode {
 	public int run(Registers registers, MMU mmu) {
 		registers.setA(~registers.getA());
 		
-		registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
+		registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, true);
 		
 		return 0;
 	}

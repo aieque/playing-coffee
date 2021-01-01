@@ -13,11 +13,7 @@ public class RestartOpcode implements Opcode {
 
 	@Override
 	public int run(Registers registers, MMU mmu) {
-		registers.decSP();
-		mmu.write(registers.getPC() >> 8, registers.getSP());
-		registers.decSP();
-		mmu.write(registers.getPC(), registers.getSP());
-		
+		mmu.pushStack(registers.getPC(), registers);
 		registers.setPC(address);
 		
 		return 12;

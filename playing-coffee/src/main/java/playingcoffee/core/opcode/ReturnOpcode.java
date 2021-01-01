@@ -26,14 +26,9 @@ public class ReturnOpcode implements Opcode {
 	}
 	
 	@Override
-	public int run(Registers registers, MMU mmu) {
-		int addressToJump = mmu.read(registers.getSP());
-		registers.incSP();
-		
-		addressToJump |= mmu.read(registers.getSP()) << 8;
-		registers.incSP();
-		
+	public int run(Registers registers, MMU mmu) {		
 		if (canExecute(registers)) {
+			int addressToJump = mmu.popStack(registers);
 			Log.info("Returning from 0x%4x to 0x%4x", registers.getPC(), addressToJump);
 			
 			registers.setPC(addressToJump);

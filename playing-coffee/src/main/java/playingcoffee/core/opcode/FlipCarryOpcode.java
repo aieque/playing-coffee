@@ -6,6 +6,8 @@ import playingcoffee.core.cpu.Registers;
 
 public class FlipCarryOpcode implements Opcode {
 
+	// NOTE: Tetris does not use this opcode.
+	
 	@Override
 	public int run(Registers registers, MMU mmu) {
 		registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);

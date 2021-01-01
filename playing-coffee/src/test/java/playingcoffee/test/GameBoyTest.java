@@ -1,8 +1,12 @@
 package playingcoffee.test;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.junit.Test;
+
+import playingcoffee.core.cpu.Flags;
 
 public class GameBoyTest {
 
@@ -21,6 +25,24 @@ public class GameBoyTest {
 		}
 		
 		while (true) cpu.clock();*/
+	}
+	
+	@Test
+	public void testFlags() {
+		Flags flags = new Flags();
+		assertEquals(flags.get(), 0);
+		
+		flags.set(Flags.ZERO | Flags.CARRY, true);
+		
+		assertEquals(flags.get(), Flags.ZERO | Flags.CARRY);
+		
+		flags.set(Flags.ZERO | Flags.HALF_CARRY, false);
+		
+		assertEquals(flags.get(), Flags.CARRY);
+		
+		flags.set(Flags.CARRY, true);
+		
+		assertEquals(flags.get(), Flags.CARRY);
 	}
 	
 }

@@ -1,22 +1,4 @@
-INDEX VERSION 1.131+C:\dev\playing-coffee\.metadata\.plugins\org.eclipse.jdt.core
-3964923001.index
-3618832045.index
-699245563.index
-1583749204.index
-1593673412.index
-2562169395.index
-424447496.index
-2173726253.index
-854353447.index
-3608884278.index
-3992513546.index
-1630848587.index
-1851668056.index
-3550930481.index
-12417758.index
-21486501.index
-4163494320.index
-2709655776.index
-2068962978.index
-3179953034.index
-596698939.index
+INDEX VERSION 1.131+/home/sixten/Documents/playing-coffee/.metadata/.plugins/org.eclipse.jdt.core
+1558221869.index
+908895367.index
+1819307639.index

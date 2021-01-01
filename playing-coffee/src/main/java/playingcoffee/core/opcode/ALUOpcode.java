@@ -30,7 +30,7 @@ public class ALUOpcode implements Opcode {
 			registers.getFlags().set(Flags.CARRY, (result & 0xFF00) > 0);
 			
 			break;
-		case ADC:
+		case ADC: // NOTE: Tetris does not use this opcode.
 			int value = registerValue + (registers.getFlags().get(Flags.CARRY) ? 1 : 0);
 			
 			result = registers.getA() + value;
@@ -51,8 +51,6 @@ public class ALUOpcode implements Opcode {
 			
 			break;
 		case CP:
-			result = registers.getA();
-			
 			registers.getFlags().set(Flags.ZERO, registers.getA() == registerValue);
 			registers.getFlags().set(Flags.NEGATIVE, true);
 			registers.getFlags().set(Flags.HALF_CARRY, (registerValue & 0xF) > (registers.getA() & 0xF));
@@ -66,7 +64,7 @@ public class ALUOpcode implements Opcode {
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY | Flags.CARRY, false);
 			
 			break;
-		case SBC:
+		case SBC: // NOTE: Tetris does not use this opcode.
 			value = registerValue + (registers.getFlags().get(Flags.CARRY) ? 1 : 0);
 			
 			registers.getFlags().set(Flags.ZERO, value == registers.getA());
@@ -80,7 +78,7 @@ public class ALUOpcode implements Opcode {
 		case SUB:
 			registers.getFlags().set(Flags.ZERO, registerValue == registers.getA());
 			registers.getFlags().set(Flags.NEGATIVE, true);
-			registers.getFlags().set(Flags.HALF_CARRY, registerValue > (registers.getA() & 0xF));
+			registers.getFlags().set(Flags.HALF_CARRY, (registerValue & 0xF) > (registers.getA() & 0xF));
 			registers.getFlags().set(Flags.CARRY, registerValue > registers.getA());
 			
 			result = registers.getA() - registerValue;
@@ -116,7 +114,7 @@ public class ALUOpcode implements Opcode {
 			break;
 		}
 		
-		if (type != ALUType.INC && type != ALUType.DEC)
+		if (type != ALUType.INC && type != ALUType.DEC && type != ALUType.CP)
 			registers.setA(result);
 		
 		return 0;

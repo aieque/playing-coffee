@@ -12,6 +12,7 @@ import playingcoffee.core.opcode.ALU16Opcode.ALU16Type;
 import playingcoffee.core.opcode.ALUOpcode;
 import playingcoffee.core.opcode.ALUOpcode.ALUType;
 import playingcoffee.core.opcode.Argument;
+import playingcoffee.core.opcode.BCDOpcode;
 import playingcoffee.core.opcode.CallOpcode;
 import playingcoffee.core.opcode.ComplementOpcode;
 import playingcoffee.core.opcode.FlipCarryOpcode;
@@ -26,6 +27,7 @@ import playingcoffee.core.opcode.RestartOpcode;
 import playingcoffee.core.opcode.ReturnOpcode;
 import playingcoffee.core.opcode.RotateAOpcode;
 import playingcoffee.core.opcode.SetCarryOpcode;
+import playingcoffee.core.opcode.StopOpcode;
 import playingcoffee.core.opcode.prefixed.BitOpcode;
 import playingcoffee.core.opcode.prefixed.ResetBitOpcode;
 import playingcoffee.core.opcode.prefixed.RotateOpcode;
@@ -43,6 +45,8 @@ public class CPU implements InterruptListener {
 	private Registers registers;
 	
 	private int cycles;
+	
+	private boolean lowPowerMode = false;
 	
 	Opcode[] opcodes;
 	Opcode[] prefixedOpcodes;
@@ -104,7 +108,7 @@ public class CPU implements InterruptListener {
 				opcodes[row.getKey()] = new LoadOpcode(val.getValue(), row.getValue());
 			}
 		}
-
+		
 		opcodes[0x08] = new LoadOpcode(Argument.SP, Argument._D16_SHORT);
 		
 		opcodes[0xE0] = new LoadOpcode(Argument.A, Argument._D8);
@@ -127,6 +131,7 @@ public class CPU implements InterruptListener {
 		}
 		
 		// TODO: Override 0x76 with HALT
+		opcodes[0x76] = new StopOpcode(this);
 		
 		// Jumps, Calls and Returns
 		opcodes[0x20] = new JumpRelativeOpcode(Flags.ZERO, Argument.I8, true);
@@ -203,6 +208,9 @@ public class CPU implements InterruptListener {
 		opcodes[0xFB] = new InterruptOpcode(true, interruptManager);
 		
 		// Misc
+		opcodes[0x10] = new StopOpcode(this);
+		
+		opcodes[0x27] = new BCDOpcode();
 		opcodes[0x2F] = new ComplementOpcode();
 		opcodes[0x37] = new SetCarryOpcode();
 		opcodes[0x3F] = new FlipCarryOpcode();
@@ -263,10 +271,12 @@ public class CPU implements InterruptListener {
     }
 	
 	public void clock() {
+		if (lowPowerMode) return;
+		
 		if (cycles == 0) {
 			//Log.info("PC: 0x%4x", registers.getPC());
 			
-			if (registers.getPC() == 0x2EFC) {
+			if (registers.getPC() == 0x02cd) {
 				Log.info("Breakpoint.");
 			}
 			
@@ -296,8 +306,6 @@ public class CPU implements InterruptListener {
 			Log.close();
 
 			throw new IllegalStateException();
-			
-			//System.exit(0);
 		}
 		
 		//Log.info("Executing opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
@@ -313,30 +321,35 @@ public class CPU implements InterruptListener {
 			Log.close();
 			
 			throw new IllegalStateException();
-			
-			//System.exit(0);
 		}
 		
 		//Log.info("Executing prefixed opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
 		cycles += opcode.run(registers, mmu) + 8; // Adding 8 because we fetch the 0xCB prefix and the instruction.
 	}
 
+	public void enterLowPowerMode() {
+		lowPowerMode = true;
+	}
+	
+	public void exitLowPowerMode() {
+		lowPowerMode = false;
+	}
+	
 	@Override
 	public void interruptOccured(int types) {
-		/*if ((types & InterruptManager.VBLANK) != 0) {
+		if ((types & InterruptManager.VBLANK) != 0) {
 			interruptManager.disable();
+			lowPowerMode = false;
 			
-			registers.decSP();
-			mmu.write(registers.getPC() >> 8, registers.getSP());
-			registers.decSP();
-			mmu.write(registers.getPC(), registers.getSP());
+			mmu.pushStack(registers.getPC(), registers);
 			
 			Log.info("Pushing 0x%4x to the stack.", registers.getPC());
+			Log.info("Firing V-Blank");
 			
 			registers.setPC(0x40);
 			
 			cycles += 12;
-		}*/
+		}
 	}
 	
 	

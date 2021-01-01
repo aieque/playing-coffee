@@ -10,6 +10,8 @@ public class SetBitOpcode implements Opcode {
 	private int bit;
 	private Argument argument;
 	
+	// NOTE: Tetris does not use this opcode.
+	
 	public SetBitOpcode(int bit, Argument argument) {
 		this.bit = bit;
 		this.argument = argument;

@@ -23,9 +23,11 @@ public class GameBoy implements Runnable {
 		
 		ppu = new PPU(mmu, interruptManager);
 		cpu = new CPU(mmu, interruptManager);
-		
+	}
+	
+	public void init() {
 		mmu.connectMemorySpace(interruptManager);
-		mmu.connectMemorySpace(new Cartridge("roms/kwirk.gb"));
+		mmu.connectMemorySpace(new Cartridge("roms/supermarioland.gb"));	
 	}
 	
 	public void start() {
@@ -52,10 +54,12 @@ public class GameBoy implements Runnable {
 	public void run() {
 		Log.init();
 		
+		init();
+		
 		while (running) {
 			for (int i = 0; i < 8192; i++) {
-				ppu.clock();
 				cpu.clock();
+				ppu.clock();
 				interruptManager.clock();
 			}
 
