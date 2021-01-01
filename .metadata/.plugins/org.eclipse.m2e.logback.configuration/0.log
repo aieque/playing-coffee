@@ -11374,3 +11374,119 @@
 2021-01-01 11:48:41,511 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
 2021-01-01 11:48:41,511 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-01-01 11:48:41,512 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:16,194 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:16,194 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:16,195 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:16,195 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:20,363 [Worker-189: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:20,363 [Worker-189: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:20,364 [Worker-189: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:20,364 [Worker-189: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:24,524 [Worker-190: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:24,524 [Worker-190: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:24,525 [Worker-190: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:24,525 [Worker-190: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:50,822 [Worker-190: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:50,823 [Worker-190: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:50,823 [Worker-190: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:50,824 [Worker-190: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:51,969 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:51,969 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:51,970 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:51,970 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:51:53,026 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:53,026 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:51:53,027 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:51:53,027 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:52:22,697 [Worker-193: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:22,697 [Worker-193: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:52:22,698 [Worker-193: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:22,698 [Worker-193: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:52:23,813 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:23,813 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:52:23,814 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:23,816 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:52:24,836 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:24,837 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:52:24,837 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:52:24,838 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:53:24,274 [Worker-194: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:24,275 [Worker-194: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:53:24,276 [Worker-194: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:24,276 [Worker-194: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:53:25,438 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:25,439 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:53:25,441 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:25,442 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:53:26,445 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:26,446 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:53:26,446 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:53:26,447 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:54:15,722 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:15,722 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:54:15,723 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:15,723 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:54:16,728 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:16,728 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:54:16,729 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:16,729 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:54:23,967 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:23,969 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:54:23,972 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:23,973 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:54:38,837 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:38,837 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:54:38,838 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:54:38,838 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:55:07,422 [Worker-195: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:07,423 [Worker-195: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:55:07,424 [Worker-195: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:07,424 [Worker-195: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:55:44,474 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:44,475 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:55:44,476 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:44,476 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:55:45,531 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:45,531 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:55:45,532 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:55:45,532 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:56:06,879 [Worker-193: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:56:06,880 [Worker-193: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:56:06,880 [Worker-193: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:56:06,880 [Worker-193: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:03,347 [Worker-196: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:03,348 [Worker-196: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:03,348 [Worker-196: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:03,349 [Worker-196: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:04,462 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:04,462 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:04,468 [Worker-180: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:04,469 [Worker-180: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:05,521 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:05,521 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:05,522 [Worker-192: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:05,522 [Worker-192: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:39,636 [Worker-180: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:39,637 [Worker-180: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:39,637 [Worker-180: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:39,638 [Worker-180: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:40,802 [Worker-189: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:40,802 [Worker-189: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:40,803 [Worker-189: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:40,803 [Worker-189: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 11:57:41,855 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:41,856 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 11:57:41,856 [Worker-194: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 11:57:41,856 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 12:02:02,415 [Worker-196: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:02,417 [Worker-196: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 12:02:02,418 [Worker-196: Launching Application] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:02,418 [Worker-196: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 12:02:03,455 [Worker-199: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:03,455 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 12:02:03,456 [Worker-199: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:03,457 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources
+2021-01-01 12:02:04,511 [Worker-198: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:04,511 [Worker-198: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/main/resources
+2021-01-01 12:02:04,512 [Worker-198: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-01-01 12:02:04,512 [Worker-198: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/sixten/Documents/playing-coffee/playing-coffee/src/test/resources

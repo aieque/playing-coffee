@@ -27,7 +27,7 @@ public class GameBoy implements Runnable {
 	
 	public void init() {
 		mmu.connectMemorySpace(interruptManager);
-		mmu.connectMemorySpace(new Cartridge("roms/supermarioland.gb"));	
+		mmu.connectMemorySpace(new Cartridge("roms/cpu_instrs.gb"));	
 	}
 	
 	public void start() {

@@ -61,7 +61,7 @@ public class MMU {
 	}
 
 	public int read(int address) {
-		if (address == 0xFF00) return 0xF; // TODO: Remove
+		if (address == 0xFF00) return 0xFF; // TODO: Remove
 		
 		if (address >= 0x00 && address <= 0xFF && read(0xFF50) == 0)
 			return bootRom[address];
