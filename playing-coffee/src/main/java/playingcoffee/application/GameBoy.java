@@ -1,6 +1,6 @@
 package playingcoffee.application;
 
-import playingcoffee.core.Cartridge;
+import playingcoffee.cartridge.Cartridge;
 import playingcoffee.core.InterruptManager;
 import playingcoffee.core.MMU;
 import playingcoffee.core.cpu.CPU;
@@ -27,7 +27,7 @@ public class GameBoy implements Runnable {
 	
 	public void init() {
 		mmu.connectMemorySpace(interruptManager);
-		mmu.connectMemorySpace(new Cartridge("roms/cpu_instrs.gb"));	
+		mmu.connectMemorySpace(new Cartridge("roms/drmario.gb").getMBC());	
 	}
 	
 	public void start() {
@@ -61,6 +61,11 @@ public class GameBoy implements Runnable {
 				cpu.clock();
 				ppu.clock();
 				interruptManager.clock();
+			
+				if (mmu.read(0xFF02) == 0x81) {
+					System.out.print((char)mmu.read(0xFF01));
+					mmu.write(0, 0xFF02);
+				}
 			}
 
 			try {

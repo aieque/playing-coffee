@@ -25,6 +25,10 @@ public class PPURegisters implements MemorySpace {
 		lcdcStatus = (lcdcStatus & 0xFC) | mode;
 	}
 	
+	public int getLCDCMode() {
+		return lcdcStatus & 0x3;
+	}
+	
 	public int read(int address) {
 		switch (address) {
 			case 0xFF40: return lcdControl;

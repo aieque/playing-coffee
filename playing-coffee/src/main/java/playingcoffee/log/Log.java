@@ -63,7 +63,7 @@ public class Log {
 		
 		ansiColor = useColors ? ansiColor : "";
 		
-		System.out.println(ansiColor + finalMessage);
+		//System.out.println(ansiColor + finalMessage);
 		try {
 			fileWriter.write(finalMessage + "\n");
 		} catch (IOException e) {
