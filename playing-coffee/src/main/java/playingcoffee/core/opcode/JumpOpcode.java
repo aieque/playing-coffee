@@ -45,6 +45,6 @@ public class JumpOpcode implements Opcode {
 		case Flags.CARRY:      flag = 'C'; break;
 		}
 		
-		return "JP " + (not ? "" : "N") + flag + ", " + address.getName();
+		return "JP " + (not ? "N" : "") + flag + ", " + address.getName();
 	}
 }

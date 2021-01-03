@@ -4,13 +4,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import playingcoffee.core.InterruptListener;
-import playingcoffee.core.InterruptManager;
 import playingcoffee.core.MMU;
 import playingcoffee.core.opcode.ALU16Opcode;
 import playingcoffee.core.opcode.ALU16Opcode.ALU16Type;
 import playingcoffee.core.opcode.ALUOpcode;
 import playingcoffee.core.opcode.ALUOpcode.ALUType;
+import playingcoffee.core.opcode.AddSPI8Opcode;
 import playingcoffee.core.opcode.Argument;
 import playingcoffee.core.opcode.BCDOpcode;
 import playingcoffee.core.opcode.CallOpcode;
@@ -34,6 +33,8 @@ import playingcoffee.core.opcode.prefixed.RotateOpcode;
 import playingcoffee.core.opcode.prefixed.SetBitOpcode;
 import playingcoffee.core.opcode.prefixed.ShiftOpcode;
 import playingcoffee.core.opcode.prefixed.ShiftOpcode.ShiftType;
+import playingcoffee.interrupt.InterruptListener;
+import playingcoffee.interrupt.InterruptManager;
 import playingcoffee.core.opcode.prefixed.SwapOpcode;
 import playingcoffee.log.Log;
 
@@ -110,6 +111,7 @@ public class CPU implements InterruptListener {
 		}
 		
 		opcodes[0x08] = new LoadOpcode(Argument.SP, Argument._D16_SHORT);
+		opcodes[0xF8] = new LoadOpcode(Argument.SP_I8, Argument.HL);
 		
 		opcodes[0xE0] = new LoadOpcode(Argument.A, Argument._D8);
 		opcodes[0xF0] = new LoadOpcode(Argument._D8, Argument.A);
@@ -182,6 +184,7 @@ public class CPU implements InterruptListener {
 		for (Entry<Integer, Argument> val : indexedList(0x09, 0x10, Argument.BC, Argument.DE,Argument.HL, Argument.SP)) {
 			opcodes[val.getKey()] = new ALU16Opcode(ALU16Type.ADD, val.getValue());
 		}
+		opcodes[0xE8] = new AddSPI8Opcode();
 		
 		// ALU Opcodes
 		for (Entry<Integer, Argument> val : indexedList(0x04, 8, Argument.B, Argument.C, Argument.D, Argument.E, Argument.H, Argument.L, Argument._HL, Argument.A)) {
@@ -276,10 +279,6 @@ public class CPU implements InterruptListener {
 		if (cycles == 0) {
 			//Log.info("PC: 0x%4x", registers.getPC());
 			
-			if (registers.getPC() == 0x02cd) {
-				Log.info("Breakpoint.");
-			}
-			
 			int opcodeValue = mmu.read(registers.getPC());
 			registers.incPC();
 			
@@ -308,7 +307,7 @@ public class CPU implements InterruptListener {
 			throw new IllegalStateException();
 		}
 		
-		//Log.info("Executing opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
+		Log.info("Executing opcode: 0x%2x (%s) at 0x%4x", opcodeValue, opcode.toString(), registers.getPC());
 		cycles += opcode.run(registers, mmu) + 4; // Adding 4 because we fetch the instruction.
 	}
 
@@ -323,7 +322,7 @@ public class CPU implements InterruptListener {
 			throw new IllegalStateException();
 		}
 		
-		//Log.info("Executing prefixed opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
+		Log.info("Executing prefixed opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
 		cycles += opcode.run(registers, mmu) + 8; // Adding 8 because we fetch the 0xCB prefix and the instruction.
 	}
 
@@ -340,15 +339,25 @@ public class CPU implements InterruptListener {
 		if ((types & InterruptManager.VBLANK) != 0) {
 			interruptManager.disable();
 			lowPowerMode = false;
-			
 			mmu.pushStack(registers.getPC(), registers);
-			
-			Log.info("Pushing 0x%4x to the stack.", registers.getPC());
-			Log.info("Firing V-Blank");
-			
-			registers.setPC(0x40);
-			
 			cycles += 12;
+			registers.setPC(0x40);
+		}
+
+		if ((types & InterruptManager.LCD_STAT) != 0) {
+			interruptManager.disable();
+			lowPowerMode = false;
+			mmu.pushStack(registers.getPC(), registers);
+			cycles += 12;
+			registers.setPC(0x48);
+		}
+		
+		if ((types & InterruptManager.TIMER) != 0) {
+			interruptManager.disable();
+			lowPowerMode = false;
+			mmu.pushStack(registers.getPC(), registers);
+			cycles += 12;
+			registers.setPC(0x50);
 		}
 	}
 	

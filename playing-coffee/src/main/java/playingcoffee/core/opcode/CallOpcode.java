@@ -3,7 +3,6 @@ package playingcoffee.core.opcode;
 import playingcoffee.core.MMU;
 import playingcoffee.core.cpu.Flags;
 import playingcoffee.core.cpu.Registers;
-import playingcoffee.log.Log;
 
 public class CallOpcode implements Opcode {
 
@@ -28,7 +27,7 @@ public class CallOpcode implements Opcode {
 		if (canExecute(registers)) {
 			mmu.pushStack(registers.getPC(), registers);
 			
-			Log.info("Pushing 0x%4x to the stack.", registers.getPC());
+			//Log.info("Pushing 0x%4x to the stack.", registers.getPC());
 			
 			registers.setPC(addressToJump);
 			
@@ -51,7 +50,7 @@ public class CallOpcode implements Opcode {
 		case Flags.CARRY:      flag = 'C'; break;
 		}
 		
-		return "CALL " + (not ? "" : "N") + flag + ", " + address.getName();
+		return "CALL " + (not ? "N" : "") + flag + ", " + address.getName();
 	}
 
 }

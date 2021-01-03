@@ -22,7 +22,7 @@ public class RotateAOpcode implements Opcode {
 		if (direction == LEFT) {
 			if (withCarry) { // NOTE: Tetris does not use this opcode.
 				int value = registers.getA();
-				int result = (value << 1) | ((value >> 7) & 1);
+				int result = (value << 1) | ((value & 0x80) >> 7);
 
 				registers.getFlags().set(Flags.ZERO | Flags.NEGATIVE | Flags.HALF_CARRY, false);
 				registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
@@ -48,7 +48,7 @@ public class RotateAOpcode implements Opcode {
 				registers.setA(result);
 			} else { // NOTE: Tetris does not use this opcode.
 				int value = registers.getA();
-				int result = (value >> 1) | ((registers.getFlags().get(Flags.CARRY) ? 1 : 0) << 7);
+				int result = (value >> 1) | ((registers.getFlags().get(Flags.CARRY) ? 0x80 : 0));
 				
 				registers.getFlags().set(Flags.ZERO | Flags.NEGATIVE | Flags.HALF_CARRY, false);
 				registers.getFlags().set(Flags.CARRY, (value & 1) != 0);

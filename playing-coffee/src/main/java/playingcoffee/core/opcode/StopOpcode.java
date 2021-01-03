@@ -6,6 +6,8 @@ import playingcoffee.core.cpu.Registers;
 
 public class StopOpcode implements Opcode {
 
+	// NOTE: Tetris does not use this opcode.
+	
 	private CPU cpu;
 	
 	public StopOpcode(CPU cpu) {

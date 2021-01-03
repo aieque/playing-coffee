@@ -36,5 +36,13 @@ public class MBC1 extends MBC {
 		return address >= 0x0000 && address <= 0x7FFF;
 	}
 
+	public boolean isRAM() {
+		return ram;
+	}
+
+	public boolean isBattery() {
+		return battery;
+	}
+
 	
 }

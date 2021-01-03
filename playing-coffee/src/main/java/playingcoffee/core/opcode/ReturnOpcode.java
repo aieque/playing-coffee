@@ -1,10 +1,9 @@
 package playingcoffee.core.opcode;
 
-import playingcoffee.core.InterruptManager;
 import playingcoffee.core.MMU;
 import playingcoffee.core.cpu.Flags;
 import playingcoffee.core.cpu.Registers;
-import playingcoffee.log.Log;
+import playingcoffee.interrupt.InterruptManager;
 
 public class ReturnOpcode implements Opcode {
 
@@ -26,10 +25,21 @@ public class ReturnOpcode implements Opcode {
 	}
 	
 	@Override
-	public int run(Registers registers, MMU mmu) {		
+	public int run(Registers registers, MMU mmu) {
+		if (conditionFlag == 0) {
+			int addressToJump = mmu.popStack(registers);
+			registers.setPC(addressToJump);
+			
+			if (fromInterupt) {
+				interruptManager.enable();
+			}
+			
+			return 12;
+		}
+		
 		if (canExecute(registers)) {
 			int addressToJump = mmu.popStack(registers);
-			Log.info("Returning from 0x%4x to 0x%4x", registers.getPC(), addressToJump);
+			//Log.info("Returning from 0x%4x to 0x%4x", registers.getPC(), addressToJump);
 			
 			registers.setPC(addressToJump);
 			

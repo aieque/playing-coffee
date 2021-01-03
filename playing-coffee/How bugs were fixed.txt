@@ -1,0 +1,2 @@
+One bug was fixed by changing "value" to "result".
+Loads of bugs were fixed by making "setAF" actually work, instead of setting a to f and f to a.

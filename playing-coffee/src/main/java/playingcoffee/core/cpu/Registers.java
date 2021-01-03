@@ -38,7 +38,7 @@ public class Registers {
 	public int getPC() { return pc; }
 	public int getSP() { return sp; }
 	
-	public void setAF(int value) { flags.set(value >> 8); setA(value); }
+	public void setAF(int value) { setA(value >> 8); flags.set(value); }
 	public void setBC(int value) { setB(value >> 8); setC(value); }
 	public void setDE(int value) { setD(value >> 8); setE(value); }
 	public void setHL(int value) { setH(value >> 8); setL(value); }

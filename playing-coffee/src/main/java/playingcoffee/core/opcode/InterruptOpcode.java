@@ -1,8 +1,8 @@
 package playingcoffee.core.opcode;
 
-import playingcoffee.core.InterruptManager;
 import playingcoffee.core.MMU;
 import playingcoffee.core.cpu.Registers;
+import playingcoffee.interrupt.InterruptManager;
 
 public class InterruptOpcode implements Opcode {
 

@@ -1,15 +1,17 @@
 package playingcoffee.ppu;
 
-import playingcoffee.core.InterruptManager;
 import playingcoffee.core.MMU;
+import playingcoffee.interrupt.InterruptManager;
+import playingcoffee.ppu.OAM.OAMEntry;
 
 public class PPU {
 
-	private final MMU mmu;
 	private final InterruptManager interruptManager;
+	final MMU mmu;
 	
 	private PPURegisters registers;
 	private VRAM vram;
+	private OAM oam;
 	
 	private int clockCount = 0;
 	
@@ -20,61 +22,74 @@ public class PPU {
 	public static final int OAM_SEARCH = 2;
 	public static final int PIXEL_TRANSFER = 3;
 	
+
 	public PPU(final MMU mmu, final InterruptManager interruptManager) {
 		this.mmu = mmu;
 		this.interruptManager = interruptManager;
 		
 		registers = new PPURegisters(this);
 		vram = new VRAM(this);
+		oam = new OAM();
 		
 		framebuffer = new int[160 * 144];
 		
 		this.mmu.connectMemorySpace(registers);
 		this.mmu.connectMemorySpace(vram);
+		this.mmu.connectMemorySpace(oam);
 	}
 	
 	public void onLCDDisable() {
 		clockCount = 0;
 	}
 	
-	public void OAMSeach() {
-		registers.setLCDCMode(OAM_SEARCH);
-	}
+	public void OAMSeach() {}
 	
 	public void pixelTransfer() {
-		registers.setLCDCMode(PIXEL_TRANSFER);
+		int scanline = registers.lcdcYCoord;
+		int lineX = clockCount % 114 - 80;
 	}
 	
-	public void HBlank() {
-		registers.setLCDCMode(HBLANK);
-	}	
+	public void HBlank() {}
 	
-	public void VBlank() {
-		registers.setLCDCMode(VBLANK);
-	}
+	public void VBlank() {}
 	
 	public void clock() {
-		registers.lcdcYCoord = clockCount / 114;
+		registers.lcdcYCoord = clockCount / 456;
 		
-		if (clockCount == 144 * 114) renderToFramebuffer();
-		if (clockCount == 114 * 144) {
+		if (clockCount == 456 * 144) {
 			interruptManager.requestInterrupt(InterruptManager.VBLANK);
+			renderToFramebuffer();
+
+			registers.setLCDCMode(VBLANK);
+		}
+		
+		if (clockCount % 456 == 80 && registers.getLCDCMode() != VBLANK) registers.setLCDCMode(PIXEL_TRANSFER);
+		
+		if (clockCount % 456 == 248 && registers.getLCDCMode() != VBLANK) {
+			registers.setLCDCMode(HBLANK);
+		}
+		if (clockCount % 456 == 0 && registers.getLCDCMode() != VBLANK) {
+			registers.setLCDCMode(OAM_SEARCH);
 		}
 
-		
-		if (clockCount < 114 * 144) {
-			if (clockCount % 114 < 20) OAMSeach();
-			else if (clockCount % 114 < 43) pixelTransfer();
-			else HBlank();
-			
-		} else {
-			VBlank();
+		switch (registers.getLCDCMode()) {
+			case OAM_SEARCH: OAMSeach(); break;
+			case PIXEL_TRANSFER: pixelTransfer(); break;
+			case HBLANK: HBlank(); break;
+			case VBLANK: VBlank(); break;
 		}
 		
 		clockCount++;
 		
-		if (clockCount == 17556) {
+		if (clockCount == 456 * (144 + 10)) {
+			registers.setLCDCMode(OAM_SEARCH);
 			clockCount = 0;
+		}
+		
+		if (registers.lcdcYCoord == registers.lyCompare) {
+			registers.lcdcStatus |= 0x4;
+		} else {
+			registers.lcdcStatus &= ~0x4;
 		}
 	}
 
@@ -82,15 +97,62 @@ public class PPU {
 		if (x >= 0 && x < 160 && y >= 0 && y < 144) framebuffer[x + y * 160] = pixel;
 	}
 	
-	private void putTile(int address, int screenX, int screenY) {
+	private void putTile(int address, int screenX, int screenY, boolean window) {
+		int palette = mmu.read(0xFF47);
+		
 		for (int y = 0; y < 8; y++) {
 			for (int n = 0; n < 8; n++) {
 				int value = ((vram.vram[address + y * 2] >> (7 - n)) & 1) |
 						   (((vram.vram[address + y * 2 + 1] >> (7 - n)) & 1) << 1);
 			
-				int color = (value * 64) | ((value * 64) << 8) | ((value * 64) << 16);
+				value = (palette >> (value * 2)) & 0x3;
 				
-				putPixel(color, screenX + n, screenY + y);
+				int color = 0xFFFFFF - ((value * 64) | ((value * 64) << 8) | ((value * 64) << 16));
+				
+				if (window)
+					putPixel(color, screenX + n, screenY + y);
+				else
+					putPixel(color, (screenX + n) & 255, (screenY + y) & 255);
+			}
+		}
+	}
+	
+	private void putSprite(int address, int screenX, int screenY, int paletteIndex, boolean flipX, boolean flipY) {
+		int palette = mmu.read(0xFF48 + paletteIndex);
+
+		for (int y = 0; y < 8; y++) {
+			for (int n = 0; n < 8; n++) {
+				int value = ((vram.vram[address + y * 2] >> (7 - n)) & 1) |
+						   (((vram.vram[address + y * 2 + 1] >> (7 - n)) & 1) << 1);
+
+				if (value != 0) {
+			
+					value = (palette >> (value * 2)) & 0x3;
+
+					int color = 0xFFFFFF - ((value * 64) | ((value * 64) << 8) | ((value * 64) << 16));
+					
+					putPixel(color, screenX + (flipX ? (7 - n) : n), screenY + (flipY ? (7 - y) : y));
+				}
+			}
+		}
+		
+		if ((registers.lcdControl & 0x4) != 0) { // 8x16 Mode
+			address += 16;
+			
+			for (int y = 0; y < 8; y++) {
+				for (int n = 0; n < 8; n++) {
+					int value = ((vram.vram[address + y * 2] >> (7 - n)) & 1) |
+							   (((vram.vram[address + y * 2 + 1] >> (7 - n)) & 1) << 1);
+
+					if (value != 0) {
+				
+						value = (palette >> (value * 2)) & 0x3;
+
+						int color = 0xFFFFFF - ((value * 64) | ((value * 64) << 8) | ((value * 64) << 16));
+						
+						putPixel(color, screenX + (flipX ? (7 - n) : n), screenY + (flipY ? (7 - y) : y) + 8);
+					}
+				}
 			}
 		}
 	}
@@ -98,6 +160,7 @@ public class PPU {
 	private void renderToFramebuffer() {
 		boolean backgroundTileDataSelect = (registers.lcdControl & 0x10) != 0;
 		int[] backgroundMap = (registers.lcdControl & 0x8) != 0 ? vram.background1 : vram.background0;
+		int[] windowMap     = (registers.lcdControl & 0x8) == 0 ? vram.background1 : vram.background0;
 		
 		for (int tileY = 0; tileY < 32; tileY++) {
 			for (int tileX = 0; tileX < 32; tileX++) {
@@ -110,8 +173,41 @@ public class PPU {
 					tileAddress = 0x1000 + tileIndex * 16;
 				}
 				
-				putTile(tileAddress, tileX * 8 - registers.scrollX, tileY * 8 - registers.scrollY);
+				putTile(tileAddress, tileX * 8 - registers.scrollX, tileY * 8 - registers.scrollY, false);
 			}
+		}
+		
+		// Render Window
+		if ((registers.lcdControl & 0x20) != 0) {
+			for (int tileY = 0; tileY < 32; tileY++) {
+				for (int tileX = 0; tileX < 32; tileX++) {
+					int tileIndex = windowMap[tileX + tileY * 32];
+					
+					int tileAddress = tileIndex * 16;
+					
+					if (!backgroundTileDataSelect) {
+						if (tileIndex >= 128) tileIndex -= 256;
+						tileAddress = 0x1000 + tileIndex * 16;
+					}
+					
+					putTile(tileAddress, tileX * 8 + registers.windowX, tileY * 8 + registers.windowY, true);
+				}
+			}
+		}
+		
+		// Render sprites (Objects)
+		for (int i = 0; i < 40; i++) {
+			OAMEntry entry = oam.entries[i];
+			
+			int address = entry.tileNumber * 16;
+			
+			int palette = (entry.flags & 0x10) >> 4;
+			
+			//boolean behindBG = (entry.flags & 0x80) != 0;
+			boolean flipX = (entry.flags & 0x20) != 0;
+			boolean flipY = (entry.flags & 0x40) != 0;
+		
+			putSprite(address, entry.x - 8, entry.y - 16, palette, flipX, flipY);
 		}
 	}
 	

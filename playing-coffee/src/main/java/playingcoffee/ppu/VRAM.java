@@ -9,6 +9,7 @@ public class VRAM implements MemorySpace {
 	public int[] background0;
 	public int[] background1;
 	
+	@SuppressWarnings("unused")
 	private final PPU ppu;
 	
 	public VRAM(final PPU ppu) {
@@ -22,7 +23,7 @@ public class VRAM implements MemorySpace {
 	
 	@Override
 	public int read(int address) {
-		if (ppu.getRegisters().getLCDCMode() == PPU.PIXEL_TRANSFER) return 0xFF;
+//		if (ppu.getRegisters().getLCDCMode() == PPU.PIXEL_TRANSFER) return 0xFF;
 		
 		if (address >= 0x8000 && address <= 0x97FF) return vram[address - 0x8000];
 		if (address >= 0x9800 && address <= 0x9BFF) return background0[address % (32 * 32)];
@@ -33,11 +34,12 @@ public class VRAM implements MemorySpace {
 
 	@Override
 	public void write(int value, int address) {
-		if (ppu.getRegisters().getLCDCMode() == PPU.PIXEL_TRANSFER) return;
+//		if (ppu.getRegisters().getLCDCMode() == PPU.PIXEL_TRANSFER) return;
+
+		if (address >= 0x9C00 && address <= 0x9FFF) background1[address % (32 * 32)] = value;
+		if (address >= 0x9800 && address <= 0x9BFF) background0[address % (32 * 32)] = value;
 		
 		if (address >= 0x8000 && address <= 0x97FF) vram[address - 0x8000] = value;
-		if (address >= 0x9800 && address <= 0x9BFF) background0[address % (32 * 32)] = value;
-		if (address >= 0x9C00 && address <= 0x9FFF) background1[address % (32 * 32)] = value;
 	}
 
 	@Override

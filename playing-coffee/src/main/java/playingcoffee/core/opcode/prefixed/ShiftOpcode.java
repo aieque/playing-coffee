@@ -20,14 +20,12 @@ public class ShiftOpcode implements Opcode {
 		SLA, SRA, SRL
 	}
 
-	// NOTE: Tetris does not use these opcodes.
-	
 	@Override
 	public int run(Registers registers, MMU mmu) {
-		int value, result;
+		int value, result = 0;
 		
 		switch (type) {
-		case SLA:
+		case SLA: 
 			value = register.read(registers, mmu);
 			result = value << 1;
 			
@@ -35,7 +33,7 @@ public class ShiftOpcode implements Opcode {
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
 			break;
-		case SRA:
+		case SRA: // NOTE: Tetris does not use this opcode.
 			value = register.read(registers, mmu);
 			result = (value >> 1) | (value & 0x80);
 			
@@ -43,15 +41,17 @@ public class ShiftOpcode implements Opcode {
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x1) != 0);
 			break;
-		case SRL:
+		case SRL: // NOTE: Tetris does not use this opcode.
 			value = register.read(registers, mmu);
-			result = (value >> 1) | ((value << 7) & 0x80);
+			result = (value >> 1);
 			
 			registers.getFlags().set(Flags.ZERO, result == 0);
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x1) != 0);
 			break;
 		}
+		
+		register.write(result, registers, mmu);
 		
 		return register.getCycles() * 2;
 	}

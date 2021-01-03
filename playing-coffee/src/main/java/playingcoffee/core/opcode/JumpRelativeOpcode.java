@@ -46,6 +46,6 @@ public class JumpRelativeOpcode implements Opcode {
 		case Flags.CARRY:      flag = 'C'; break;
 		}
 		
-		return "JR " + (not ? "" : "N") + flag + ", " + address.getName();
+		return "JR " + (not ? "N" : "") + flag + ", " + address.getName();
 	}
 }

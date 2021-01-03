@@ -10,7 +10,7 @@ public class Flags {
 	public static final int CARRY = 1 << 4;
 	
 	public void set(int value) {
-		f = value & 0xFF;
+		f = value & 0xF0;
 	}
 	
 	public int get() {

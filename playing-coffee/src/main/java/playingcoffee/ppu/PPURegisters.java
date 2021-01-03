@@ -14,7 +14,6 @@ public class PPURegisters implements MemorySpace {
 	public int objPalette0, objPalette1; // 0xFF48 - 0xFF49
 	public int windowY, windowX; // 0xFF4A - 0xFF4B
 	
-	@SuppressWarnings("unused")
 	private final PPU ppu;
 	
 	public PPURegisters(PPU ppu) {
@@ -37,7 +36,7 @@ public class PPURegisters implements MemorySpace {
 			case 0xFF43: return scrollX;
 			case 0xFF44: return lcdcYCoord;
 			case 0xFF45: return lyCompare;
-			case 0xFF46: return dmaTransferStart; // TODO: Do DMA (I have no idea how to do it though...)
+			case 0xFF46: return dmaTransferStart;
 			case 0xFF47: return bgPalette;
 			case 0xFF48: return objPalette0;
 			case 0xFF49: return objPalette1;
@@ -56,7 +55,13 @@ public class PPURegisters implements MemorySpace {
 			case 0xFF43: scrollX = value; return;
 			case 0xFF44: return;
 			case 0xFF45: lyCompare = value; return;
-			case 0xFF46: dmaTransferStart = value; return; // TODO: Do DMA (I have no idea how to do it though...)
+			case 0xFF46:
+				dmaTransferStart = value; // TODO: Redo the DMA transfer
+				
+				for (int i = 0; i < 0x100; i++) {
+					ppu.mmu.write(ppu.mmu.read((value << 8) + i), 0xFE00 + i);
+				}
+				return;
 			case 0xFF47: bgPalette = value; return;
 			case 0xFF48: objPalette0 = value; return;
 			case 0xFF49: objPalette1 = value; return;

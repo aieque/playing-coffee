@@ -22,27 +22,38 @@ public class ALU16Opcode implements Opcode {
 		switch (type) {
 		case INC:
 			register.write(register.read(registers, mmu) + 1, registers, mmu);
-			break;
+			return 4;
 		case DEC:
 			register.write(register.read(registers, mmu) - 1, registers, mmu);
-			break;
+			return 4;
 		case ADD:
 			int value = register.read(registers, mmu);
 			result = registers.getHL() + value;
 			
 			registers.getFlags().set(Flags.NEGATIVE, false);
-			registers.getFlags().set(Flags.HALF_CARRY, ((value & 0xF0) + (registers.getHL() & 0xF0) > 0xF0));
+			registers.getFlags().set(Flags.HALF_CARRY, ((value & 0xFFF) + (registers.getHL() & 0xFFF) > 0xFFF));
 			registers.getFlags().set(Flags.CARRY, (result & 0xFFFF0000) != 0);
 			
 			registers.setHL(result);
 			
-			break;
+			return 4;
+		/*case ADD_SP_I8:
+			value = register.read(registers, mmu);
+			result = registers.getSP() + value;
+			
+			registers.getFlags().set(Flags.ZERO | Flags.NEGATIVE, false);
+			registers.getFlags().set(Flags.HALF_CARRY, ((registers.getSP() ^ value ^ result) & 0x100) == 0x100);
+			registers.getFlags().set(Flags.CARRY, ((registers.getSP() ^ value ^ result) & 0x10) == 0x10);
+			
+			registers.setSP(result);
+			
+			return 12;*/
 		default:
 			Log.error("wtf!? how did we get here?!?!?");
 			break;
 		}
 		
-		return register.getCycles() * (type == ALU16Type.ADD ? 1 : 2);
+		throw new IllegalArgumentException("Invalid type");
 	}
 
 	public enum ALU16Type {

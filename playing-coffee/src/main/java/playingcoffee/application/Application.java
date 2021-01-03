@@ -8,6 +8,8 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import playingcoffee.core.GameBoy;
+
 public class Application extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
@@ -17,10 +19,19 @@ public class Application extends Canvas implements Runnable {
 	
 	private GameBoy gameBoy;
 	
+	private SwingJoypad joypad;
+	
 	public Application() {
 		setPreferredSize(new Dimension(320, 288));
-	
+		setFocusable(true);
+		requestFocus();
+		
 		gameBoy = new GameBoy();
+
+		joypad = new SwingJoypad(gameBoy.getInterruptManager());
+		addKeyListener(joypad);
+		gameBoy.setJoypad(joypad);
+		
 		gameBoy.start();
 	}
 	
@@ -76,6 +87,12 @@ public class Application extends Canvas implements Runnable {
 	public void run() {
 		while (running) {
 			renderGameBoy();
+			try {
+				Thread.sleep(15);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		gameBoy.stop();

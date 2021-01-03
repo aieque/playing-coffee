@@ -1,6 +1,7 @@
 package playingcoffee.core.opcode;
 
 import playingcoffee.core.MMU;
+import playingcoffee.core.cpu.Flags;
 import playingcoffee.core.cpu.Registers;
 import playingcoffee.log.Log;
 
@@ -299,7 +300,7 @@ public enum Argument {
 			
 			registers.incPC();
 			
-			return (mmu.read(address) << 8) | mmu.read(address);
+			return (mmu.read(address + 1) << 8) | mmu.read(address);
 		}
 
 		@Override
@@ -312,9 +313,31 @@ public enum Argument {
 			
 			registers.incPC();
 			
-			mmu.write(value >> 8, address);
-			mmu.write(value, address + 1);
+			mmu.write(value >> 8, address + 1);
+			mmu.write(value, address);
 		}
+	}, SP_I8(8) {
+
+		@Override
+		public int read(Registers registers, MMU mmu) {
+			int relativeAddress = (byte) mmu.read(registers.getPC());
+			
+			registers.incPC();
+			
+			int returnValue = registers.getSP() + relativeAddress;
+			
+			registers.getFlags().set(Flags.ZERO | Flags.NEGATIVE, false);
+			registers.getFlags().set(Flags.HALF_CARRY, ((registers.getSP() ^ relativeAddress ^ returnValue) & 0x10) == 0x10);
+			registers.getFlags().set(Flags.CARRY, ((registers.getSP() ^ relativeAddress ^ returnValue) & 0x100) == 0x100);
+			
+			return returnValue;
+		}
+
+		@Override
+		public void write(int value, Registers registers, MMU mmu) {
+			Log.error("Why are you writing to this argument?");
+		}
+		
 	};
 
 	private String name;

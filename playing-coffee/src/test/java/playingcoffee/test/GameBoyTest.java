@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 import playingcoffee.core.cpu.Flags;
+import playingcoffee.core.cpu.Registers;
 
 public class GameBoyTest {
 
@@ -45,4 +46,22 @@ public class GameBoyTest {
 		assertEquals(flags.get(), Flags.CARRY);
 	}
 	
+	public void testRegisters() {
+		Registers registers = new Registers();
+		
+		registers.setAF(0x1284);
+		assertEquals(0x1284, registers.getAF());
+		
+		registers.setHL(0x4295);
+		assertEquals(0x42, registers.getH());
+		assertEquals(0x95, registers.getL());
+		
+		assertEquals(0x4295, registers.getHL());
+
+		registers.setSP(0xFF89);
+		registers.setHL(registers.getSP());
+		
+		assertEquals(registers.getSP(), registers.getHL());
+		
+	}
 }

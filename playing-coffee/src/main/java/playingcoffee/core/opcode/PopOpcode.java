@@ -2,7 +2,6 @@ package playingcoffee.core.opcode;
 
 import playingcoffee.core.MMU;
 import playingcoffee.core.cpu.Registers;
-import playingcoffee.log.Log;
 
 public class PopOpcode implements Opcode {
 
@@ -18,7 +17,7 @@ public class PopOpcode implements Opcode {
 		
 		register.write(value, registers, mmu);
 		
-		Log.info("Popping 0x%4x from the stack.", value);
+		//Log.info("Popping 0x%4x from the stack.", value);
 		
 		return 8;
 	}
