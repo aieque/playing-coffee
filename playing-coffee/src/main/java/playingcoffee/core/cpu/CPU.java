@@ -26,7 +26,7 @@ import playingcoffee.core.opcode.RestartOpcode;
 import playingcoffee.core.opcode.ReturnOpcode;
 import playingcoffee.core.opcode.RotateAOpcode;
 import playingcoffee.core.opcode.SetCarryOpcode;
-import playingcoffee.core.opcode.StopOpcode;
+import playingcoffee.core.opcode.HaltOpcode;
 import playingcoffee.core.opcode.prefixed.BitOpcode;
 import playingcoffee.core.opcode.prefixed.ResetBitOpcode;
 import playingcoffee.core.opcode.prefixed.RotateOpcode;
@@ -132,8 +132,7 @@ public class CPU implements InterruptListener {
 			opcodes[val.getKey()] = new PushOpcode(val.getValue());
 		}
 		
-		// TODO: Override 0x76 with HALT
-		opcodes[0x76] = new StopOpcode(this);
+		opcodes[0x76] = new HaltOpcode(this);
 		
 		// Jumps, Calls and Returns
 		opcodes[0x20] = new JumpRelativeOpcode(Flags.ZERO, Argument.I8, true);
@@ -211,7 +210,7 @@ public class CPU implements InterruptListener {
 		opcodes[0xFB] = new InterruptOpcode(true, interruptManager);
 		
 		// Misc
-		opcodes[0x10] = new StopOpcode(this);
+		opcodes[0x10] = new HaltOpcode(this);
 		
 		opcodes[0x27] = new BCDOpcode();
 		opcodes[0x2F] = new ComplementOpcode();
@@ -274,6 +273,11 @@ public class CPU implements InterruptListener {
     }
 	
 	public void clock() {
+		if (lowPowerMode && interruptManager.getPendingInterruptsBeforeHalt() != interruptManager.getInterruptFlag()) {
+			cycles += 4;
+			lowPowerMode = false;
+		}
+		
 		if (lowPowerMode) return;
 		
 		if (cycles == 0) {
@@ -307,7 +311,7 @@ public class CPU implements InterruptListener {
 			throw new IllegalStateException();
 		}
 		
-		Log.info("Executing opcode: 0x%2x (%s) at 0x%4x", opcodeValue, opcode.toString(), registers.getPC());
+//		Log.info("Executing opcode: 0x%2x (%s) at 0x%4x", opcodeValue, opcode.toString(), registers.getPC());
 		cycles += opcode.run(registers, mmu) + 4; // Adding 4 because we fetch the instruction.
 	}
 
@@ -322,8 +326,12 @@ public class CPU implements InterruptListener {
 			throw new IllegalStateException();
 		}
 		
-		Log.info("Executing prefixed opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
+//		Log.info("Executing prefixed opcode: 0x%2x (%s)", opcodeValue, opcode.toString());
 		cycles += opcode.run(registers, mmu) + 8; // Adding 8 because we fetch the 0xCB prefix and the instruction.
+	}
+
+	public InterruptManager getInterruptManager() {
+		return interruptManager;
 	}
 
 	public void enterLowPowerMode() {
@@ -340,7 +348,7 @@ public class CPU implements InterruptListener {
 			interruptManager.disable();
 			lowPowerMode = false;
 			mmu.pushStack(registers.getPC(), registers);
-			cycles += 12;
+			cycles += 13;
 			registers.setPC(0x40);
 		}
 
@@ -348,7 +356,7 @@ public class CPU implements InterruptListener {
 			interruptManager.disable();
 			lowPowerMode = false;
 			mmu.pushStack(registers.getPC(), registers);
-			cycles += 12;
+			cycles += 13;
 			registers.setPC(0x48);
 		}
 		
@@ -356,7 +364,7 @@ public class CPU implements InterruptListener {
 			interruptManager.disable();
 			lowPowerMode = false;
 			mmu.pushStack(registers.getPC(), registers);
-			cycles += 12;
+			cycles += 13;
 			registers.setPC(0x50);
 		}
 	}

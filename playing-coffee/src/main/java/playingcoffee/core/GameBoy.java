@@ -29,7 +29,7 @@ public class GameBoy implements Runnable {
 	
 	public void init() {
 		mmu.connectMemorySpace(interruptManager);
-		mmu.connectMemorySpace(new Cartridge("roms/cpu_instrs.gb").getMBC());	
+		mmu.connectMemorySpace(new Cartridge("roms/zelda.gb").getMBC());
 		mmu.connectMemorySpace(timer);
 	}
 	
@@ -67,8 +67,8 @@ public class GameBoy implements Runnable {
 			for (int i = 0; i < 8192; i++) {
 				cpu.clock();
 				ppu.clock();
-				//interruptManager.clock();
-				//timer.clock();
+				interruptManager.clock();
+				timer.clock();
 			
 				if (mmu.read(0xFF02) == 0x81) {
 					System.out.print((char)mmu.read(0xFF01));

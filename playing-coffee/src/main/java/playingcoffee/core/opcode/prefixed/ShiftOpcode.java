@@ -29,7 +29,7 @@ public class ShiftOpcode implements Opcode {
 			value = register.read(registers, mmu);
 			result = value << 1;
 			
-			registers.getFlags().set(Flags.ZERO, result == 0);
+			registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
 			break;
@@ -37,7 +37,7 @@ public class ShiftOpcode implements Opcode {
 			value = register.read(registers, mmu);
 			result = (value >> 1) | (value & 0x80);
 			
-			registers.getFlags().set(Flags.ZERO, result == 0);
+			registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x1) != 0);
 			break;
@@ -45,7 +45,7 @@ public class ShiftOpcode implements Opcode {
 			value = register.read(registers, mmu);
 			result = (value >> 1);
 			
-			registers.getFlags().set(Flags.ZERO, result == 0);
+			registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 			registers.getFlags().set(Flags.CARRY, (value & 0x1) != 0);
 			break;

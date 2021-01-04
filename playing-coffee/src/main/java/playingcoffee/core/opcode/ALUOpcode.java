@@ -98,7 +98,7 @@ public class ALUOpcode implements Opcode {
 			
 			registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 			registers.getFlags().set(Flags.NEGATIVE, false);
-			registers.getFlags().set(Flags.HALF_CARRY, (result & 0x10) != 0);
+			registers.getFlags().set(Flags.HALF_CARRY, (registerValue & 0xF) == 0xF);
 			
 			register.write(result, registers, mmu);
 			return register.getCycles() * 2;
@@ -107,7 +107,7 @@ public class ALUOpcode implements Opcode {
 			
 			registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 			registers.getFlags().set(Flags.NEGATIVE, true);
-			registers.getFlags().set(Flags.HALF_CARRY, (registerValue & 0x0F) == 0x0F);
+			registers.getFlags().set(Flags.HALF_CARRY, (result & 0x0F) == 0x0F);
 			
 			register.write(result, registers, mmu);
 			return register.getCycles() * 2;

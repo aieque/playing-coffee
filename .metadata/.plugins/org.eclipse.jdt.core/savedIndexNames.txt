@@ -17,6 +17,5 @@ INDEX VERSION 1.131+C:\dev\playing-coffee\.metadata\.plugins\org.eclipse.jdt.cor
 21486501.index
 4163494320.index
 2709655776.index
-2068962978.index
 3179953034.index
 596698939.index

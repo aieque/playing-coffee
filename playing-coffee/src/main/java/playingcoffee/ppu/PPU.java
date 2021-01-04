@@ -17,6 +17,9 @@ public class PPU {
 	
 	private int[] framebuffer;
 	
+	// TODO: Remove
+	private int screenXs[];
+	
 	public static final int HBLANK = 0;
 	public static final int VBLANK = 1;
 	public static final int OAM_SEARCH = 2;
@@ -33,6 +36,8 @@ public class PPU {
 		
 		framebuffer = new int[160 * 144];
 		
+		screenXs = new int[144];
+		
 		this.mmu.connectMemorySpace(registers);
 		this.mmu.connectMemorySpace(vram);
 		this.mmu.connectMemorySpace(oam);
@@ -45,11 +50,10 @@ public class PPU {
 	public void OAMSeach() {}
 	
 	public void pixelTransfer() {
-		int scanline = registers.lcdcYCoord;
-		int lineX = clockCount % 114 - 80;
+
 	}
 	
-	public void HBlank() {}
+	public void HBlank() { screenXs[registers.lcdcYCoord] = registers.scrollX; }
 	
 	public void VBlank() {}
 	
@@ -61,15 +65,21 @@ public class PPU {
 			renderToFramebuffer();
 
 			registers.setLCDCMode(VBLANK);
+
+			if ((registers.lcdcStatus & 0x10) != 0) interruptManager.requestInterrupt(InterruptManager.LCD_STAT);
 		}
 		
 		if (clockCount % 456 == 80 && registers.getLCDCMode() != VBLANK) registers.setLCDCMode(PIXEL_TRANSFER);
 		
-		if (clockCount % 456 == 248 && registers.getLCDCMode() != VBLANK) {
+		if (clockCount % 456 == 240 && registers.getLCDCMode() != VBLANK) {
 			registers.setLCDCMode(HBLANK);
+			
+			if ((registers.lcdcStatus & 0x8) != 0) interruptManager.requestInterrupt(InterruptManager.LCD_STAT);
 		}
 		if (clockCount % 456 == 0 && registers.getLCDCMode() != VBLANK) {
 			registers.setLCDCMode(OAM_SEARCH);
+
+			if ((registers.lcdcStatus & 0x20) != 0) interruptManager.requestInterrupt(InterruptManager.LCD_STAT);
 		}
 
 		switch (registers.getLCDCMode()) {
@@ -173,7 +183,8 @@ public class PPU {
 					tileAddress = 0x1000 + tileIndex * 16;
 				}
 				
-				putTile(tileAddress, tileX * 8 - registers.scrollX, tileY * 8 - registers.scrollY, false);
+				if (tileY * 8 - registers.scrollY >= 0 && tileY * 8 - registers.scrollY < 144)
+					putTile(tileAddress, tileX * 8 - screenXs[tileY * 8 - registers.scrollY], tileY * 8 - registers.scrollY, false);
 			}
 		}
 		
@@ -190,7 +201,7 @@ public class PPU {
 						tileAddress = 0x1000 + tileIndex * 16;
 					}
 					
-					putTile(tileAddress, tileX * 8 + registers.windowX, tileY * 8 + registers.windowY, true);
+					putTile(tileAddress, tileX * 8 + registers.windowX - 4, tileY * 8 + registers.windowY, true);
 				}
 			}
 		}
@@ -203,10 +214,11 @@ public class PPU {
 			
 			int palette = (entry.flags & 0x10) >> 4;
 			
-			//boolean behindBG = (entry.flags & 0x80) != 0;
+			boolean behindBG = (entry.flags & 0x80) != 0;
 			boolean flipX = (entry.flags & 0x20) != 0;
 			boolean flipY = (entry.flags & 0x40) != 0;
-		
+
+			if (!behindBG)
 			putSprite(address, entry.x - 8, entry.y - 16, palette, flipX, flipY);
 		}
 	}

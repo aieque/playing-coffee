@@ -24,20 +24,11 @@ public class RotateOpcode implements Opcode {
 	@Override
 	public int run(Registers registers, MMU mmu) {
 		if (direction == LEFT) {
-			/*int value = register.read(registers, mmu);
-			int result = (value << 1) | (!withCarry ? (registers.getFlags().get(Flags.CARRY) ? 1 : 0) : (value >> 7) & 1);
-			
-			registers.getFlags().set(Flags.ZERO, result == 0);
-			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
-			registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
-			
-			register.write(result, registers, mmu);*/
-			
 			if (withCarry) { // NOTE: Tetris does not use this opcode.
 				int value = register.read(registers, mmu);
 				int result = (value << 1) | ((value >> 7) & 1);
 
-				registers.getFlags().set(Flags.ZERO, result == 0);
+				registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 				registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 				registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
 
@@ -46,7 +37,7 @@ public class RotateOpcode implements Opcode {
 				int value = register.read(registers, mmu);
 				int result = (value << 1) | (registers.getFlags().get(Flags.CARRY) ? 1 : 0);
 				
-				registers.getFlags().set(Flags.ZERO, result == 0);
+				registers.getFlags().set(Flags.ZERO, (result & 0xFF) == 0);
 				registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
 				registers.getFlags().set(Flags.CARRY, (value & 0x80) != 0);
 				
@@ -54,15 +45,6 @@ public class RotateOpcode implements Opcode {
 			}
 			
 		} else { // NOTE: Tetris does not use this opcode.
-			/*int value = register.read(registers, mmu);
-			int result = (value >> 1) | ((!withCarry ? (registers.getFlags().get(Flags.CARRY) ? 1 : 0) : (value & 0x1)) << 7);
-			
-			registers.getFlags().set(Flags.ZERO, result == 0);
-			registers.getFlags().set(Flags.NEGATIVE | Flags.HALF_CARRY, false);
-			registers.getFlags().set(Flags.CARRY, (value & 1) != 0);
-			
-			register.write(result, registers, mmu);*/
-			
 			if (withCarry) { // NOTE: Tetris does not use this opcode.
 				int value = register.read(registers, mmu);
 				int result = (value >> 1) | ((value & 0x1) << 7);

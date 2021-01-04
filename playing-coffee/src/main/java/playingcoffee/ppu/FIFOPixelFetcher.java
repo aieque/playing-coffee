@@ -10,10 +10,12 @@ public class FIFOPixelFetcher {
 	public static final int SLEEP         = 3;
 	public static final int PUSH          = 4;
 	
+	@SuppressWarnings("unused")
 	private final PixelFIFO pixelFIFO;
 
-	private int tile;
+	@SuppressWarnings("unused")
 	private int high, low;
+	private int tile;
 	
 	public FIFOPixelFetcher(final PixelFIFO pixelFIFO) {
 		this.pixelFIFO = pixelFIFO;

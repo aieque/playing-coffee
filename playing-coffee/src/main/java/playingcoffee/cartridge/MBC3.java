@@ -1,6 +1,6 @@
 package playingcoffee.cartridge;
 
-public class MBC1 extends MBC {
+public class MBC3 extends MBC {
 
 	private boolean ram;
 	private boolean battery;
@@ -12,7 +12,7 @@ public class MBC1 extends MBC {
 	
 	private int[] extRAM;
 	
-	public MBC1(boolean hasRAM, boolean hasBattery, int[] rom) {
+	public MBC3(boolean hasRAM, boolean hasBattery, int[] rom) {
 		super(rom);
 		
 		this.ram = hasRAM;

@@ -13,6 +13,8 @@ public class InterruptManager implements MemorySpace {
 	private int interruptEnable;
 	private int interruptFlag;
 	
+	private int pendingInterruptsBeforeHalt;
+	
 	private List<InterruptListener> listeners;
 	
 	public static final int VBLANK = 1 << 0;
@@ -34,6 +36,17 @@ public class InterruptManager implements MemorySpace {
 	
 	public boolean isEnabled() { return enabled; }
 	
+	public void storePendingInterruptsBeforeHalt() { pendingInterruptsBeforeHalt = interruptFlag; }
+	public int getPendingInterruptsBeforeHalt() { return pendingInterruptsBeforeHalt; }
+	
+	public int getInterruptEnable() {
+		return interruptEnable;
+	}
+
+	public int getInterruptFlag() {
+		return interruptFlag;
+	}
+
 	public void requestInterrupt(int type) {
 		interruptFlag |= type;
 	}
@@ -48,7 +61,7 @@ public class InterruptManager implements MemorySpace {
 			if (scheduleEnable == 0) enabled = false;
 		}
 		
-		if (enabled) {
+		if (enabled || pendingInterruptsBeforeHalt != 0) {
 			int toOccur = interruptFlag & interruptEnable;
 			
 			//System.out.println(toOccur);
