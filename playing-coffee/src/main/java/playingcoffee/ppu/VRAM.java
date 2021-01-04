@@ -8,17 +8,12 @@ public class VRAM implements MemorySpace {
 	
 	public int[] background0;
 	public int[] background1;
-	
-	@SuppressWarnings("unused")
-	private final PPU ppu;
-	
-	public VRAM(final PPU ppu) {
+
+	public VRAM() {
 		vram = new int[0x1800];
 		
 		background0 = new int[32 * 32];
 		background1 = new int[32 * 32];
-	
-		this.ppu = ppu;
 	}
 	
 	@Override

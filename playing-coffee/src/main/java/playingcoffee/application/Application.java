@@ -1,7 +1,6 @@
 package playingcoffee.application;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
@@ -44,14 +43,14 @@ public class Application extends Canvas implements Runnable {
 		
 		Graphics g = bs.getDrawGraphics();
 		
-		int[] framebuffer = gameBoy.getPPU().getFrameBuffer();
+		/*int[] framebuffer = gameBoy.getPPU().getFrameBuffer();
 		
 		for (int x = 0; x < 160; x++) {
 			for (int y = 0; y < 144; y++) {
 				g.setColor(new Color(framebuffer[x + y * 160]));
 				g.fillRect(x * 2, y * 2, 2, 2);
 			}
-		}
+		}*/
 		
 //		g.setColor(Color.WHITE);
 //		g.fillRect(0, 0, getWidth(), getHeight());

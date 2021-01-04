@@ -18,7 +18,7 @@ public class InterruptManager implements MemorySpace {
 	private List<InterruptListener> listeners;
 	
 	public static final int VBLANK = 1 << 0;
-	public static final int LCD_STAT = 1 << 1;
+	public static final int LCDC_STAT = 1 << 1;
 	public static final int TIMER = 1 << 2;
 	public static final int SERIAL = 1 << 3;
 	public static final int JOYPAD = 1 << 4;

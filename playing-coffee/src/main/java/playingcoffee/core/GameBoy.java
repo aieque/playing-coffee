@@ -29,7 +29,7 @@ public class GameBoy implements Runnable {
 	
 	public void init() {
 		mmu.connectMemorySpace(interruptManager);
-		mmu.connectMemorySpace(new Cartridge("roms/zelda.gb").getMBC());
+		mmu.connectMemorySpace(new Cartridge("roms/cpu_instrs.gb").getMBC());
 		mmu.connectMemorySpace(timer);
 	}
 	

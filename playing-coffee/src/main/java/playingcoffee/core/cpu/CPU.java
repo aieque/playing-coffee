@@ -352,7 +352,7 @@ public class CPU implements InterruptListener {
 			registers.setPC(0x40);
 		}
 
-		if ((types & InterruptManager.LCD_STAT) != 0) {
+		if ((types & InterruptManager.LCDC_STAT) != 0) {
 			interruptManager.disable();
 			lowPowerMode = false;
 			mmu.pushStack(registers.getPC(), registers);
